@@ -1,0 +1,51 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: conv_arithmetic.aux
+Reallocating 'name_of_file' (item size: 1) to 13 items.
+Reallocating 'name_of_file' (item size: 1) to 7 items.
+The style file: natbib.bst
+Database file #1: bibliography.bib
+Warning--there's a number but no series in collobert2011torch7
+Warning--empty journal in visin15
+You've used 21 entries,
+            2378 wiz_defined-function locations,
+            632 strings with 8677 characters,
+and the built_in function-call counts, 11967 in all, are:
+= -- 1090
+> -- 842
+< -- 12
++ -- 255
+- -- 252
+* -- 1059
+:= -- 2061
+add.period$ -- 109
+call.type$ -- 21
+change.case$ -- 128
+chr.to.int$ -- 20
+cite$ -- 23
+duplicate$ -- 516
+empty$ -- 707
+format.name$ -- 277
+if$ -- 2431
+int.to.chr$ -- 2
+int.to.str$ -- 0
+missing$ -- 20
+newline$ -- 107
+num.names$ -- 86
+pop$ -- 212
+preamble$ -- 1
+purify$ -- 128
+quote$ -- 0
+skip$ -- 343
+stack$ -- 0
+substring$ -- 566
+swap$ -- 139
+text.length$ -- 10
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 189
+warning$ -- 2
+while$ -- 88
+width$ -- 0
+write$ -- 271
+(There were 2 warnings)
