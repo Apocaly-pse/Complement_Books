@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (MiKTeX 20.11) (preloaded format=xelatex 2020.11.14)  30 NOV 2020 20:26
+This is XeTeX, Version 3.14159265-2.6-0.999992 (MiKTeX 20.11) (preloaded format=xelatex 2020.11.14)  1 DEC 2020 16:12
 entering extended mode
 **./conv_arithmetic.tex
 (conv_arithmetic.tex
@@ -1292,7 +1292,7 @@ Package mdframed Info: mdframed detected package amsthm
 (mdframed)              on input line 496.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 512.
+(mdframed)              on input line 509.
  [15]
 File: pdf/no_padding_strides_00.pdf Graphic file (type pdf)
 <use pdf/no_padding_strides_00.pdf>
@@ -1322,7 +1322,7 @@ File: pdf/padding_strides_odd_03.pdf Graphic file (type pdf)
 第三章
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 626.
+(mdframed)              on input line 607.
 [19
 
 ]
@@ -1330,7 +1330,7 @@ Package mdframed Info: mdframed detected package amsthm
 [20
 
 ]
-Overfull \hbox (6.63345pt too wide) in paragraph at lines 690--693
+Overfull \hbox (6.63345pt too wide) in paragraph at lines 658--661
 []\T1/lmr/m/n/10.53937 This lin-ear op-er-a-tion takes the in-put ma-trix flat-
 tened as a 16-dimensional
  []
@@ -1350,7 +1350,7 @@ Overfull \hbox (12.01788pt too wide) has occurred while \output is active
 [22]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 784.
+(mdframed)              on input line 752.
 
 Overfull \hbox (12.01788pt too wide) has occurred while \output is active
 \TU/SimSun(0)/m/it/10.53937 第 四 章 转 置 卷 积 运 算 \T1/lmr/m/sl/10.53937 (TRANSPOSED
@@ -1360,7 +1360,7 @@ Overfull \hbox (12.01788pt too wide) has occurred while \output is active
 [23]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 809.
+(mdframed)              on input line 777.
 File: pdf/no_padding_no_strides_transposed_00.pdf Graphic file (type pdf)
 <use pdf/no_padding_no_strides_transposed_00.pdf>
 File: pdf/no_padding_no_strides_transposed_01.pdf Graphic file (type pdf)
@@ -1391,7 +1391,7 @@ File: pdf/same_padding_no_strides_transposed_03.pdf Graphic file (type pdf)
 <use pdf/same_padding_no_strides_transposed_03.pdf>
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 869.
+(mdframed)              on input line 837.
 
 Overfull \hbox (12.01788pt too wide) has occurred while \output is active
 \TU/SimSun(0)/m/it/10.53937 第 四 章 转 置 卷 积 运 算 \T1/lmr/m/sl/10.53937 (TRANSPOSED
@@ -1407,10 +1407,10 @@ Overfull \hbox (12.01788pt too wide) has occurred while \output is active
 [25]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 891.
+(mdframed)              on input line 859.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 926.
+(mdframed)              on input line 894.
 
 Overfull \hbox (12.01788pt too wide) has occurred while \output is active
 \TU/SimSun(0)/m/it/10.53937 第 四 章 转 置 卷 积 运 算 \T1/lmr/m/sl/10.53937 (TRANSPOSED
@@ -1444,10 +1444,10 @@ File: pdf/padding_strides_transposed_03.pdf Graphic file (type pdf)
 <use pdf/padding_strides_transposed_03.pdf>
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 990.
+(mdframed)              on input line 958.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1011.
+(mdframed)              on input line 979.
 
 Overfull \hbox (12.01788pt too wide) has occurred while \output is active
 \TU/SimSun(0)/m/it/10.53937 第 四 章 转 置 卷 积 运 算 \T1/lmr/m/sl/10.53937 (TRANSPOSED
@@ -1488,7 +1488,7 @@ Overfull \hbox (12.01788pt too wide) has occurred while \output is active
 ]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1079.
+(mdframed)              on input line 1047.
 File: pdf/dilation_00.pdf Graphic file (type pdf)
 <use pdf/dilation_00.pdf>
 File: pdf/dilation_01.pdf Graphic file (type pdf)
@@ -1506,10 +1506,10 @@ Package rerunfilecheck Info: File `conv_arithmetic.out' has not changed.
 Here is how much of TeX's memory you used:
  31680 strings out of 412197
  677930 string characters out of 2856842
- 1035383 words of memory out of 3000000
+ 1035330 words of memory out of 3000000
  50559 multiletter control sequences out of 15000+200000
  616903 words of font info for 135 fonts, out of 3000000 for 9000
  1348 hyphenation exceptions out of 8191
- 104i,20n,117p,705b,918s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 104i,20n,117p,699b,918s stack positions out of 5000i,500n,10000p,200000b,50000s
 
 Output written on conv_arithmetic.pdf (35 pages).

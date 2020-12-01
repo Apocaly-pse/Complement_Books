@@ -504,30 +504,20 @@ From this, the following relationship can be inferred:
 
 \section{有零填充，非单位步长}
 
-The most general case (convolving over a zero padded input using non-unit
-strides) can be derived by applying \autoref{rel:no_padding_strides} on an
-effective input of size $i + 2p$, in analogy to what was done for
-\autoref{rel:arbitrary_padding_no_strides}:
+最一般的情况（使用非单位步长在零填充的输入上做卷积）可以通过在大小为$i + 2p$的有效输入上应用 \autoref{rel:no_padding_strides} 来推导，类似于 \autoref{rel:arbitrary_padding_no_strides} 所做的工作： 
 
 \begin{relationship}\label{rel:padding_strides}
-For any $i$, $k$, $p$ and $s$,
+对任何 $i$, $k$, $p$ 和 $s$,
 \begin{equation*}
     o = \left\lfloor \frac{i + 2p - k}{s} \right\rfloor + 1.
 \end{equation*}
 \end{relationship}
 
-\noindent As before, the floor function means that in some cases a convolution
-will produce the same output size for multiple input sizes. More specifically,
-if $i + 2p - k$ is a multiple of $s$, then any input size $j = i + a, \quad a
-\in \{0,\ldots,s - 1\}$ will produce the same output size. Note that this
-ambiguity applies only for $s > 1$.
+\noindent 如前所述，下取整函数意味着在某些情况下，卷积将为多个输入大小生成相同的输出大小. 更具体地讲，如果 $i + 2p - k$ 是 $s$ 的倍数, 所有输出大小 $j = i + a, \quad a
+\in \{0,\ldots,s - 1\}$ 都将产生相同的输出大小. 注意，这种二义性仅应用于 $s > 1$.
 
-\autoref{fig:padding_strides} shows an example with $i = 5$, $k = 3$, $s = 2$
-and $p = 1$, while \autoref{fig:padding_strides_odd} provides an example for
-$i = 6$, $k = 3$, $s = 2$ and $p = 1$. Interestingly, despite having different
-input sizes these convolutions share the same output size. While this doesn't
-affect the analysis for {\em convolutions}, this will complicate the analysis
-in the case of {\em transposed convolutions}.
+\autoref{fig:padding_strides} 给出了当 $i = 5$, $k = 3$, $s = 2$
+和 $p = 1$ 时的一个例子, 而 \autoref{fig:padding_strides_odd} 给出了当 $i = 6$, $k = 3$, $s = 2$ 且 $p = 1$ 时的例子. 有趣的是，尽管输入大小不同，这些卷积依然共享同一输出大小. 虽然这不影响{\em 卷积}(convolutions) 的分析，但这将使{\em 转置卷积} (transposed convolutions) 的分析复杂化.
 
 \begin{figure}[p]
     \centering
@@ -537,7 +527,7 @@ in the case of {\em transposed convolutions}.
     \includegraphics[width=0.24\textwidth]{pdf/no_padding_strides_03.pdf}
     \caption{\label{fig:no_padding_strides} (No zero padding, arbitrary
         strides) Convolving a $3 \times 3$ kernel over a $5 \times 5$ input
-        using $2 \times 2$ strides (i.e., $i = 5$, $k = 3$, $s = 2$ and
+        using $2 \times 2$ strides (即 $i = 5$, $k = 3$, $s = 2$ and
         $p = 0$).}
 \end{figure}
 
@@ -549,7 +539,7 @@ in the case of {\em transposed convolutions}.
     \includegraphics[width=0.24\textwidth]{pdf/padding_strides_03.pdf}
     \caption{\label{fig:padding_strides} (Arbitrary padding and strides)
         Convolving a $3 \times 3$ kernel over a $5 \times 5$ input padded with
-        a $1 \times 1$ border of zeros using $2 \times 2$ strides (i.e.,
+        a $1 \times 1$ border of zeros using $2 \times 2$ strides (即,
         $i = 5$, $k = 3$, $s = 2$ and $p = 1$).}
 \end{figure}
 
@@ -561,7 +551,7 @@ in the case of {\em transposed convolutions}.
     \includegraphics[width=0.24\textwidth]{pdf/padding_strides_odd_03.pdf}
     \caption{\label{fig:padding_strides_odd} (Arbitrary padding and strides)
         Convolving a $3 \times 3$ kernel over a $6 \times 6$ input padded with
-        a $1 \times 1$ border of zeros using $2 \times 2$ strides (i.e.,
+        a $1 \times 1$ border of zeros using $2 \times 2$ strides (即,
         $i = 6$, $k = 3$, $s = 2$ and $p = 1$). In this case, the bottom row
         and right column of the zero padded input are not covered by the
         kernel.}
@@ -609,50 +599,29 @@ in the case of {\em transposed convolutions}.
 
 \chapter{池化运算(Pooling arithmetic)}
 
-In a neural network, pooling layers provide invariance to small translations of
-the input. The most common kind of pooling is \emph{max pooling}, which
-consists in splitting the input in (usually non-overlapping) patches and
-outputting the maximum value of each patch. Other kinds of pooling exist, e.g.,
-mean or average pooling, which all share the same idea of aggregating the input
-locally by applying a non-linearity to the content of some patches \citep{%
+在神经网络中，池化层对输入的微小转换满足不变性. 最常见的一种池化是\emph{最大值池化}(max pooling)，它包括将输入拆分为（通常不重叠）块并输出每个块的最大值. 其他类型的池化也存在，例如平均值池化，它们都具有相同的思想，即通过对某些块的内容应用非线性来汇总局部输入 \citep{%
 boureau-cvpr-10,boureau-icml-10,boureau-iccv-11,ICML2011Saxe_551}.
 
-Some readers may have noticed that the treatment of convolution arithmetic only
-relies on the assumption that some function is repeatedly applied onto subsets
-of the input. This means that the relationships derived in the previous chapter
-can be reused in the case of pooling arithmetic. Since pooling does not involve
-zero padding, the relationship describing the general case is as follows:
+一些读者可能已经注意到，卷积运算的处理仅仅依赖于一个假设，即某些函数被重复应用到输入的子集上. 这意味着上一章中导出的关系可以在池化算法下重用. 由于池化不涉及零填充，描述一般情况的关系如下： 
 
 \begin{relationship}\label{rel:pooling}
-For any $i$, $k$ and $s$,
+对任何 $i$, $k$ 和 $s$, 有
 \begin{equation*}
     o = \left\lfloor \frac{i - k}{s} \right\rfloor + 1.
 \end{equation*}
 \end{relationship}
 
-\noindent This relationship holds for any type of pooling.
+\noindent 这种关系适用于任何类型的池化.
 
 \chapter{转置卷积运算(Transposed convolution arithmetic)}
 
-The need for transposed convolutions generally arises from the desire to use a
-transformation going in the opposite direction of a normal convolution, i.e.,
-from something that has the shape of the output of some convolution to
-something that has the shape of its input while maintaining a connectivity
-pattern that is compatible with said convolution. For instance, one might use
-such a transformation as the decoding layer of a convolutional autoencoder or to
-project feature maps to a higher-dimensional space.
+转置卷积用于与正常卷积做相反方向变换的情况，即从具有某种卷积输出形状到具有其输入形状的情况，同时保持与所述卷积兼容的连接模式. 例如，可以使用这样的转换作为卷积自动编码器的解码层，或者将特征映射投影到更高维空间.
 
-Once again, the convolutional case is considerably more complex than the
-fully-connected case, which only requires to use a weight matrix whose shape
-has been transposed. However, since every convolution boils down to an
-efficient implementation of a matrix operation, the insights gained from the
-fully-connected case are useful in solving the convolutional case.
+同样，卷积的情况比完全连接的情况复杂得多，后者只需要使用形状被转置的权重矩阵. 然而，由于每一个卷积都可以归结为一个矩阵运算的有效实现，因此从全连通情形中获得的见解对于解决卷积情形是有用的.
 
-Like for convolution arithmetic, the dissertation about transposed convolution
-arithmetic is simplified by the fact that transposed convolution properties
-don't interact across axes.
+与卷积算法一样，转置卷积算法的论文由于转置卷积不跨轴交互的性质而得以简化.
 
-The chapter will focus on the following setting:
+本章将着重于以下设置:
 
 \begin{itemize}
     \item 2-D transposed convolutions ($N = 2$),
@@ -662,8 +631,7 @@ The chapter will focus on the following setting:
     \item same zero padding along both axes ($p_1 = p_2 = p$).
 \end{itemize}
 
-\noindent Once again, the results outlined generalize to the N-D and non-square
-cases.
+\noindent 结果将再次推广到N维的情形.
 
 \section{作为矩阵运算的卷积}
 
@@ -702,7 +670,7 @@ $\mathbf{C}^T$ used for the forward and backward passes.
 
 \section{转置卷积(Transposed convolution)}
 
-Let's now consider what would be required to go the other way around, i.e., map
+Let's now consider what would be required to go the other way around, 即, map
 from a 4-dimensional space to a 16-dimensional space, while keeping the
 connectivity pattern of the convolution depicted in
 \autoref{fig:no_padding_no_strides}. This operation is known as a {\em
@@ -748,7 +716,7 @@ the operation that allows to recover the \emph{shape}~\footnote{Note that the
   feature map that has the same width and height.} of this initial feature map.
 
 Let's consider the convolution of a $3 \times 3$ kernel on a $4 \times 4$
-input with unitary stride and no padding (i.e., $i = 4$, $k = 3$, $s = 1$ and
+input with unitary stride and no padding (即, $i = 4$, $k = 3$, $s = 1$ and
 $p = 0$). As depicted in \autoref{fig:no_padding_no_strides}, this produces a
 $2 \times 2$ output. The transpose of this convolution will then have an output
 of shape $4 \times 4$ when applied on a $2 \times 2$ input.
@@ -757,7 +725,7 @@ Another way to obtain the result of a transposed convolution is to apply an
 equivalent -- but much less efficient -- direct convolution. The example
 described so far could be tackled by convolving a $3 \times 3$ kernel over a
 $2 \times 2$ input padded with a $2 \times 2$ border of zeros using unit
-strides (i.e., $i' = 2$, $k' = k$, $s' = 1$ and $p' = 2$), as shown in
+strides (即, $i' = 2$, $k' = k$, $s' = 1$ and $p' = 2$), as shown in
 \autoref{fig:no_padding_no_strides_transposed}. Notably, the kernel's and
 stride's sizes remain the same, but the input of the transposed convolution is
 now zero padded.\footnote{Note that although
@@ -775,7 +743,7 @@ and so on.
 
 To maintain the same connectivity pattern in the equivalent convolution it is
 necessary to zero pad the input in such a way that the first (top-left)
-application of the kernel only touches the top-left pixel, i.e., the padding
+application of the kernel only touches the top-left pixel, 即, the padding
 has to be equal to the size of the kernel minus one.
 
 Proceeding in the same fashion it is possible to determine similar observations
@@ -823,9 +791,9 @@ p - 1$ and its output size is
     \includegraphics[width=0.24\textwidth]{pdf/no_padding_no_strides_transposed_03.pdf}
     \caption{\label{fig:no_padding_no_strides_transposed} The transpose of
         convolving a $3 \times 3$ kernel over a $4 \times 4$ input using unit
-        strides (i.e., $i = 4$, $k = 3$, $s = 1$ and $p = 0$). It is equivalent
+        strides (即, $i = 4$, $k = 3$, $s = 1$ and $p = 0$). It is equivalent
         to convolving a $3 \times 3$ kernel over a $2 \times 2$ input padded
-        with a $2 \times 2$ border of zeros using unit strides (i.e., $i' = 2$,
+        with a $2 \times 2$ border of zeros using unit strides (即, $i' = 2$,
         $k' = k$, $s' = 1$ and $p' = 2$).}
 \end{figure}
 
@@ -837,10 +805,10 @@ p - 1$ and its output size is
     \includegraphics[width=0.24\textwidth]{pdf/arbitrary_padding_no_strides_transposed_03.pdf}
     \caption{\label{fig:arbitrary_padding_no_strides_transposed} The transpose
         of convolving a $4 \times 4$ kernel over a $5 \times 5$ input padded
-        with a $2 \times 2$ border of zeros using unit strides (i.e., $i = 5$,
+        with a $2 \times 2$ border of zeros using unit strides (即, $i = 5$,
         $k = 4$, $s = 1$ and $p = 2$). It is equivalent to convolving a $4
         \times 4$ kernel over a $6 \times 6$ input padded with a $1 \times 1$
-        border of zeros using unit strides (i.e., $i' = 6$, $k' = k$, $s' = 1$
+        border of zeros using unit strides (即, $i' = 6$, $k' = k$, $s' = 1$
         and $p' = 1$).}
 \end{figure}
 
@@ -852,9 +820,9 @@ p - 1$ and its output size is
     \includegraphics[width=0.24\textwidth]{pdf/same_padding_no_strides_transposed_03.pdf}
     \caption{\label{fig:same_padding_no_strides_transposed} The transpose of
         convolving a $3 \times 3$ kernel over a $5 \times 5$ input using half
-        padding and unit strides (i.e., $i = 5$, $k = 3$, $s = 1$ and $p = 1$).
+        padding and unit strides (即, $i = 5$, $k = 3$, $s = 1$ and $p = 1$).
         It is equivalent to convolving a $3 \times 3$ kernel over a $5 \times 5$
-        input using half padding and unit strides (i.e., $i' = 5$, $k' = k$, $s'
+        input using half padding and unit strides (即, $i' = 5$, $k' = k$, $s'
         = 1$ and $p' = 1$).}
 \end{figure}
 
@@ -944,9 +912,9 @@ $s - 1$ zeros between each input unit, and its output size is
     \includegraphics[width=0.24\textwidth]{pdf/full_padding_no_strides_transposed_03.pdf}
     \caption{\label{fig:full_padding_no_strides_transposed} The transpose of
         convolving a $3 \times 3$ kernel over a $5 \times 5$ input using full
-        padding and unit strides (i.e., $i = 5$, $k = 3$, $s = 1$ and $p = 2$).
+        padding and unit strides (即, $i = 5$, $k = 3$, $s = 1$ and $p = 2$).
         It is equivalent to convolving a $3 \times 3$ kernel over a $7 \times 7$
-        input using unit strides (i.e., $i' = 7$, $k' = k$, $s' = 1$ and $p' =
+        input using unit strides (即, $i' = 7$, $k' = k$, $s' = 1$ and $p' =
         0$).}
 \end{figure}
 
@@ -958,10 +926,10 @@ $s - 1$ zeros between each input unit, and its output size is
     \includegraphics[width=0.24\textwidth]{pdf/no_padding_strides_transposed_03.pdf}
     \caption{\label{fig:no_padding_strides_transposed} The transpose of
         convolving a $3 \times 3$ kernel over a $5 \times 5$ input using $2
-        \times 2$ strides (i.e., $i = 5$, $k = 3$, $s = 2$ and $p = 0$). It is
+        \times 2$ strides (即, $i = 5$, $k = 3$, $s = 2$ and $p = 0$). It is
         equivalent to convolving a $3 \times 3$ kernel over a $2 \times 2$ input
         (with $1$ zero inserted between inputs) padded with a $2 \times 2$
-        border of zeros using unit strides (i.e., $i' = 2$, $\tilde{i}' = 3$, $k'
+        border of zeros using unit strides (即, $i' = 2$, $\tilde{i}' = 3$, $k'
         = k$, $s' = 1$ and $p' = 2$).}
 \end{figure}
 
@@ -973,10 +941,10 @@ $s - 1$ zeros between each input unit, and its output size is
     \includegraphics[width=0.24\textwidth]{pdf/padding_strides_transposed_03.pdf}
     \caption{\label{fig:padding_strides_transposed} The transpose of convolving
         a $3 \times 3$ kernel over a $5 \times 5$ input padded with a $1 \times
-        1$ border of zeros using $2 \times 2$ strides (i.e., $i = 5$, $k = 3$, $s
+        1$ border of zeros using $2 \times 2$ strides (即, $i = 5$, $k = 3$, $s
         = 2$ and $p = 1$). It is equivalent to convolving a $3 \times 3$ kernel
         over a $3 \times 3$ input (with $1$ zero inserted between inputs) padded
-        with a $1 \times 1$ border of zeros using unit strides (i.e., $i' = 3$,
+        with a $1 \times 1$ border of zeros using unit strides (即, $i' = 3$,
         $\tilde{i}' = 5$, $k' = k$, $s' = 1$ and $p' = 1$).}
 \end{figure}
 
@@ -1033,12 +1001,12 @@ of the input, and its output size is
     \includegraphics[width=0.24\textwidth]{pdf/padding_strides_odd_transposed_03.pdf}
     \caption{\label{fig:padding_strides_odd_transposed} The transpose of
         convolving a $3 \times 3$ kernel over a $6 \times 6$ input padded with a
-        $1 \times 1$ border of zeros using $2 \times 2$ strides (i.e., $i = 6$,
+        $1 \times 1$ border of zeros using $2 \times 2$ strides (即, $i = 6$,
         $k = 3$, $s = 2$ and $p = 1$). It is equivalent to convolving a $3
         \times 3$ kernel over a $2 \times 2$ input (with $1$ zero inserted
         between inputs) padded with a $1 \times 1$ border of zeros (with an
         additional border of size $1$ added to the bottom and right edges) using
-        unit strides (i.e., $i' = 3$, $\tilde{i}' = 5$, $a = 1$, $k' = k$, $s' =
+        unit strides (即, $i' = 3$, $\tilde{i}' = 5$, $a = 1$, $k' = k$, $s' =
         1$ and $p' = 1$).}
 \end{figure}
 
@@ -1091,7 +1059,7 @@ For any $i$, $k$, $p$ and $s$, and for a dilation rate $d$,
     \includegraphics[width=0.24\textwidth]{pdf/dilation_03.pdf}
     \caption{\label{fig:dilation} (Dilated convolution)
         Convolving a $3 \times 3$ kernel over a $7 \times 7$ input with a
-        dilation factor of 2 (i.e., $i = 7$, $k = 3$, $d = 2$, $s = 1$ and
+        dilation factor of 2 (即, $i = 7$, $k = 3$, $d = 2$, $s = 1$ and
         $p = 0$).}
 \end{figure}
 
