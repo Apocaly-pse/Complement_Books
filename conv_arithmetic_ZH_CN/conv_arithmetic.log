@@ -1,7 +1,10 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (MiKTeX 20.11) (preloaded format=xelatex 2020.11.14)  1 DEC 2020 16:12
+This is XeTeX, Version 3.14159265-2.6-0.999992 (MiKTeX 20.11) (preloaded format=xelatex 2020.11.14)  7 DEC 2020 18:50
 entering extended mode
-**./conv_arithmetic.tex
-(conv_arithmetic.tex
+**D:/Desktop/CODE_TEST/Complement_Books/conv_arithmetic_ZH_CN/conv_arithmetic.t
+ex
+
+(D:/Desktop/CODE_TEST/Complement_Books/conv_arithmetic_ZH_CN/conv_arithmetic.te
+x
 LaTeX2e <2020-10-01> patch level 2
 L3 programming layer <2020-10-27> xparse <2020-03-03>
 (C:\MiKTeX\tex/latex/ctex\ctexrep.cls
@@ -348,15 +351,10 @@ File: xetex.def 2020/08/26 v5.0i Graphics/color driver for xetex
 \Gin@req@height=\dimen183
 \Gin@req@width=\dimen184
 )
-(C:\MiKTeX\tex/latex/base\inputenc.sty
-Package: inputenc 2020/08/01 v1.3d Input encoding file
-\inpenc@prehook=\toks27
-\inpenc@posthook=\toks28
-
-
-Package inputenc Warning: inputenc package ignored with utf8 based engines.
-
-) (C:\MiKTeX\tex/latex/mdframed\mdframed.sty
+(C:\MiKTeX\tex/latex/newunicodechar\newunicodechar.sty
+Package: newunicodechar 2018/04/08 v1.2 Defining Unicode characters
+)
+(C:\MiKTeX\tex/latex/mdframed\mdframed.sty
 Package: mdframed 2013/07/01 1.9b: mdframed
 
 (C:\MiKTeX\tex/latex/kvoptions\kvoptions.sty
@@ -470,7 +468,7 @@ Package color Info: Driver file: xetex.def on input line 147.
 (C:\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty
 (C:\MiKTeX\tex/latex/pgf/utilities\pgfrcs.sty
 (C:\MiKTeX\tex/generic/pgf/utilities\pgfutil-common.tex
-\pgfutil@everybye=\toks29
+\pgfutil@everybye=\toks27
 \pgfutil@tempdima=\dimen185
 \pgfutil@tempdimb=\dimen186
 
@@ -490,11 +488,11 @@ Package: pgf 2020/10/01 v3.1.6a (3.1.6a)
 Package: pgfsys 2020/10/01 v3.1.6a (3.1.6a)
 
 (C:\MiKTeX\tex/generic/pgf/utilities\pgfkeys.code.tex
-\pgfkeys@pathtoks=\toks30
-\pgfkeys@temptoks=\toks31
+\pgfkeys@pathtoks=\toks28
+\pgfkeys@temptoks=\toks29
 
 (C:\MiKTeX\tex/generic/pgf/utilities\pgfkeysfiltered.code.tex
-\pgfkeys@tmptoks=\toks32
+\pgfkeys@tmptoks=\toks30
 ))
 \pgf@x=\dimen187
 \pgf@y=\dimen188
@@ -512,9 +510,9 @@ Package: pgfsys 2020/10/01 v3.1.6a (3.1.6a)
 \c@pgf@countb=\count295
 \c@pgf@countc=\count296
 \c@pgf@countd=\count297
-\t@pgf@toka=\toks33
-\t@pgf@tokb=\toks34
-\t@pgf@tokc=\toks35
+\t@pgf@toka=\toks31
+\t@pgf@tokb=\toks32
+\t@pgf@tokc=\toks33
 \pgf@sys@id@count=\count298
 
 (C:\MiKTeX\tex/generic/pgf/systemlayer\pgf.cfg
@@ -568,9 +566,9 @@ Package: pgfcore 2020/10/01 v3.1.6a (3.1.6a)
 \pgfmath@dimen=\dimen197
 \pgfmath@count=\count302
 \pgfmath@box=\box53
-\pgfmath@toks=\toks36
-\pgfmath@stack@operand=\toks37
-\pgfmath@stack@operation=\toks38
+\pgfmath@toks=\toks34
+\pgfmath@stack@operand=\toks35
+\pgfmath@stack@operation=\toks36
 )
 (C:\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.code.tex
 (C:\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.basic.code.tex)
@@ -693,8 +691,8 @@ Package: pgffor 2020/10/01 v3.1.6a (3.1.6a)
 (C:\MiKTeX\tex/generic/pgf/math\pgfmath.code.tex)
 \pgffor@iter=\dimen280
 \pgffor@skip=\dimen281
-\pgffor@stack=\toks39
-\pgffor@toks=\toks40
+\pgffor@stack=\toks37
+\pgffor@toks=\toks38
 ))
 (C:\MiKTeX\tex/generic/pgf/frontendlayer/tikz\tikz.code.tex
 Package: tikz 2020/10/01 v3.1.6a (3.1.6a)
@@ -823,9 +821,9 @@ Package: nextpage 2009/09/03 v1.1a additional page commands
 (C:\MiKTeX\tex/latex/float\float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count326
-\float@exts=\toks41
+\float@exts=\toks39
 \float@box=\box68
-\@float@everytoks=\toks42
+\@float@everytoks=\toks40
 \@floatcapt=\box69
 )
 (C:\MiKTeX\tex/latex/hyperref\hyperref.sty
@@ -1001,89 +999,89 @@ File: tikzlibrarypositioning.code.tex 2020/10/01 v3.1.6a (3.1.6a)
  (conv_arithmetic.aux)
 \openout1 = `conv_arithmetic.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
  ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 64.
+LaTeX Info: Redefining \selectfont on input line 65.
 
 Package fontspec Info: Adjusting the maths setup (use [no-math] to avoid
 (fontspec)             this).
 
 \symlegacymaths=\mathgroup6
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 64.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 64.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 64.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 64.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 64.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 64.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 64.
-LaTeX Font Info:    Redeclaring math accent \check on input line 64.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 64.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 64.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 64.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 64.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 64.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 64.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 64.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 64.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 64.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 64.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 64.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 64.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 64.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 64.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 64.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 64.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 65.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 65.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 65.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 65.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 65.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 65.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 65.
+LaTeX Font Info:    Redeclaring math accent \check on input line 65.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 65.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 65.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 65.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 65.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 65.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 65.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 65.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 65.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 65.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 65.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 65.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 65.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 65.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 65.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 65.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 65.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 64.
+(Font)              `operators' in the math version `normal' on input line 65.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/lmr/m/n on input line 64.
+(Font)                  OT1/cmr/m/n --> TU/lmr/m/n on input line 65.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 64.
+(Font)              `operators' in the math version `bold' on input line 65.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/lmr/m/n on input line 64.
+(Font)                  OT1/cmr/bx/n --> TU/lmr/m/n on input line 65.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  TU/lmr/m/n --> TU/lmr/m/n on input line 64.
+(Font)                  TU/lmr/m/n --> TU/lmr/m/n on input line 65.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/lmr/m/it on input line 64.
+(Font)                  OT1/cmr/m/it --> TU/lmr/m/it on input line 65.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/lmr/b/n on input line 64.
+(Font)                  OT1/cmr/bx/n --> TU/lmr/b/n on input line 65.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 64.
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 65.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 64.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 65.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  TU/lmr/m/n --> TU/lmr/b/n on input line 64.
+(Font)                  TU/lmr/m/n --> TU/lmr/b/n on input line 65.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> TU/lmr/b/it on input line 64.
+(Font)                  OT1/cmr/bx/it --> TU/lmr/b/it on input line 65.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 64.
+(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 65.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 64.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 65.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring ON on input line 64.
+Package hyperref Info: Link coloring ON on input line 65.
 
 (C:\MiKTeX\tex/latex/hyperref\nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -1096,19 +1094,19 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count340
 )
-LaTeX Info: Redefining \ref on input line 64.
-LaTeX Info: Redefining \pageref on input line 64.
-LaTeX Info: Redefining \nameref on input line 64.
+LaTeX Info: Redefining \ref on input line 65.
+LaTeX Info: Redefining \pageref on input line 65.
+LaTeX Info: Redefining \nameref on input line 65.
  (conv_arithmetic.out) (conv_arithmetic.out)
 \@outlinefile=\write4
 \openout4 = `conv_arithmetic.out'.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 67.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 68.
 
  (C:\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 67.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 68.
 
 
 (C:\MiKTeX\tex/latex/amsfonts\umsb.fd
@@ -1131,7 +1129,7 @@ Package fontspec Info: Could not resolve font "FangSong/I" (it probably
 (fontspec)             doesn't exist).
 
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 8
-2.
+3.
 
 (C:\MiKTeX\tex/latex/lm\t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -1199,7 +1197,7 @@ File: pdf/numerical_padding_strides_08.pdf Graphic file (type pdf)
 LaTeX Font Info:    Font shape `TU/SimSun(0)/m/sl' in size <10.53937> not avail
 able
 (Font)              Font shape `TU/SimSun(0)/m/it' tried instead on input line 
-193.
+194.
  [6] [7] [8] [9]
 File: pdf/numerical_average_pooling_00.pdf Graphic file (type pdf)
 <use pdf/numerical_average_pooling_00.pdf>
@@ -1241,7 +1239,7 @@ File: pdf/numerical_max_pooling_08.pdf Graphic file (type pdf)
 第二章
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 387.
+(mdframed)              on input line 388.
 [12
 
 ]
@@ -1279,20 +1277,20 @@ File: pdf/full_padding_no_strides_03.pdf Graphic file (type pdf)
 <use pdf/full_padding_no_strides_03.pdf>
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 438.
+(mdframed)              on input line 439.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 454.
+(mdframed)              on input line 455.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 472.
+(mdframed)              on input line 473.
  [13] [14]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 496.
+(mdframed)              on input line 497.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 509.
+(mdframed)              on input line 510.
  [15]
 File: pdf/no_padding_strides_00.pdf Graphic file (type pdf)
 <use pdf/no_padding_strides_00.pdf>
@@ -1322,7 +1320,7 @@ File: pdf/padding_strides_odd_03.pdf Graphic file (type pdf)
 第三章
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 607.
+(mdframed)              on input line 599.
 [19
 
 ]
@@ -1330,37 +1328,21 @@ Package mdframed Info: mdframed detected package amsthm
 [20
 
 ]
-Overfull \hbox (6.63345pt too wide) in paragraph at lines 658--661
-[]\T1/lmr/m/n/10.53937 This lin-ear op-er-a-tion takes the in-put ma-trix flat-
-tened as a 16-dimensional
- []
-
-
-Overfull \hbox (12.01788pt too wide) has occurred while \output is active
-\TU/SimSun(0)/m/it/10.53937 第 四 章 转 置 卷 积 运 算 \T1/lmr/m/sl/10.53937 (TRANSPOSED
- CONVOLUTION ARITHMETIC) \T1/lmr/m/n/10.53937 21
+Overfull \hbox (14.49315pt too wide) in paragraph at lines 654--655
+[]\TU/SimSun(0)/m/n/10.53937 现 在 让 我 们 考 虑 一 下 从 \T1/lmr/m/n/10.53937 4 \TU/Sim
+Sun(0)/m/n/10.53937 维 空 间 映 射 到 \T1/lmr/m/n/10.53937 16 \TU/SimSun(0)/m/n/10.53
+937 维 空 间，|  并 同 时 保 持[][]\T1/lmr/m/n/10.53937 Figure 2.1[][][]\TU/SimSun(0)/m/
+n/10.53937 中
  []
 
 [21]
-Overfull \hbox (12.01788pt too wide) has occurred while \output is active
-\TU/SimSun(0)/m/it/10.53937 第 四 章 转 置 卷 积 运 算 \T1/lmr/m/sl/10.53937 (TRANSPOSED
- CONVOLUTION ARITHMETIC) \T1/lmr/m/n/10.53937 22
- []
-
-[22]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 752.
-
-Overfull \hbox (12.01788pt too wide) has occurred while \output is active
-\TU/SimSun(0)/m/it/10.53937 第 四 章 转 置 卷 积 运 算 \T1/lmr/m/sl/10.53937 (TRANSPOSED
- CONVOLUTION ARITHMETIC) \T1/lmr/m/n/10.53937 23
- []
-
-[23]
+(mdframed)              on input line 679.
+ [22]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 777.
+(mdframed)              on input line 696.
 File: pdf/no_padding_no_strides_transposed_00.pdf Graphic file (type pdf)
 <use pdf/no_padding_no_strides_transposed_00.pdf>
 File: pdf/no_padding_no_strides_transposed_01.pdf Graphic file (type pdf)
@@ -1391,33 +1373,14 @@ File: pdf/same_padding_no_strides_transposed_03.pdf Graphic file (type pdf)
 <use pdf/same_padding_no_strides_transposed_03.pdf>
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 837.
-
-Overfull \hbox (12.01788pt too wide) has occurred while \output is active
-\TU/SimSun(0)/m/it/10.53937 第 四 章 转 置 卷 积 运 算 \T1/lmr/m/sl/10.53937 (TRANSPOSED
- CONVOLUTION ARITHMETIC) \T1/lmr/m/n/10.53937 24
- []
-
-[24]
-Overfull \hbox (12.01788pt too wide) has occurred while \output is active
-\TU/SimSun(0)/m/it/10.53937 第 四 章 转 置 卷 积 运 算 \T1/lmr/m/sl/10.53937 (TRANSPOSED
- CONVOLUTION ARITHMETIC) \T1/lmr/m/n/10.53937 25
- []
-
-[25]
+(mdframed)              on input line 751.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 859.
+(mdframed)              on input line 771.
+ [23] [24]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 894.
-
-Overfull \hbox (12.01788pt too wide) has occurred while \output is active
-\TU/SimSun(0)/m/it/10.53937 第 四 章 转 置 卷 积 运 算 \T1/lmr/m/sl/10.53937 (TRANSPOSED
- CONVOLUTION ARITHMETIC) \T1/lmr/m/n/10.53937 26
- []
-
-[26]
+(mdframed)              on input line 797.
 File: pdf/full_padding_no_strides_transposed_00.pdf Graphic file (type pdf)
 <use pdf/full_padding_no_strides_transposed_00.pdf>
 File: pdf/full_padding_no_strides_transposed_01.pdf Graphic file (type pdf)
@@ -1444,23 +1407,11 @@ File: pdf/padding_strides_transposed_03.pdf Graphic file (type pdf)
 <use pdf/padding_strides_transposed_03.pdf>
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 958.
+(mdframed)              on input line 856.
+ [25] [26]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 979.
-
-Overfull \hbox (12.01788pt too wide) has occurred while \output is active
-\TU/SimSun(0)/m/it/10.53937 第 四 章 转 置 卷 积 运 算 \T1/lmr/m/sl/10.53937 (TRANSPOSED
- CONVOLUTION ARITHMETIC) \T1/lmr/m/n/10.53937 27
- []
-
-[27]
-Overfull \hbox (12.01788pt too wide) has occurred while \output is active
-\TU/SimSun(0)/m/it/10.53937 第 四 章 转 置 卷 积 运 算 \T1/lmr/m/sl/10.53937 (TRANSPOSED
- CONVOLUTION ARITHMETIC) \T1/lmr/m/n/10.53937 28
- []
-
-[28]
+(mdframed)              on input line 870.
 File: pdf/padding_strides_odd_transposed_00.pdf Graphic file (type pdf)
 <use pdf/padding_strides_odd_transposed_00.pdf>
 File: pdf/padding_strides_odd_transposed_01.pdf Graphic file (type pdf)
@@ -1469,26 +1420,14 @@ File: pdf/padding_strides_odd_transposed_02.pdf Graphic file (type pdf)
 <use pdf/padding_strides_odd_transposed_02.pdf>
 File: pdf/padding_strides_odd_transposed_03.pdf Graphic file (type pdf)
 <use pdf/padding_strides_odd_transposed_03.pdf>
-
-Overfull \hbox (12.01788pt too wide) has occurred while \output is active
-\TU/SimSun(0)/m/it/10.53937 第 四 章 转 置 卷 积 运 算 \T1/lmr/m/sl/10.53937 (TRANSPOSED
- CONVOLUTION ARITHMETIC) \T1/lmr/m/n/10.53937 29
- []
-
-[29]
-Overfull \hbox (12.01788pt too wide) has occurred while \output is active
-\TU/SimSun(0)/m/it/10.53937 第 四 章 转 置 卷 积 运 算 \T1/lmr/m/sl/10.53937 (TRANSPOSED
- CONVOLUTION ARITHMETIC) \T1/lmr/m/n/10.53937 30
- []
-
-[30]
+ [27] [28]
 第五章
-[31
+[29
 
 ]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1047.
+(mdframed)              on input line 937.
 File: pdf/dilation_00.pdf Graphic file (type pdf)
 <use pdf/dilation_00.pdf>
 File: pdf/dilation_01.pdf Graphic file (type pdf)
@@ -1497,19 +1436,19 @@ File: pdf/dilation_02.pdf Graphic file (type pdf)
 <use pdf/dilation_02.pdf>
 File: pdf/dilation_03.pdf Graphic file (type pdf)
 <use pdf/dilation_03.pdf>
- (conv_arithmetic.bbl [32] [33
+ (conv_arithmetic.bbl [30] [31
 
-] [34]) [35] (conv_arithmetic.aux)
+] [32]) [33] (conv_arithmetic.aux)
 Package rerunfilecheck Info: File `conv_arithmetic.out' has not changed.
-(rerunfilecheck)             Checksum: 3B5FB5AD45299E2E8E4AFBA34E078DAE;3875.
+(rerunfilecheck)             Checksum: AFB70DF6EF0407395A05820A25D9FA7D;2438.
  ) 
 Here is how much of TeX's memory you used:
- 31680 strings out of 412197
- 677930 string characters out of 2856842
- 1035330 words of memory out of 3000000
- 50559 multiletter control sequences out of 15000+200000
- 616903 words of font info for 135 fonts, out of 3000000 for 9000
+ 31739 strings out of 412197
+ 681948 string characters out of 2856842
+ 1034288 words of memory out of 3000000
+ 50615 multiletter control sequences out of 15000+200000
+ 616919 words of font info for 137 fonts, out of 3000000 for 9000
  1348 hyphenation exceptions out of 8191
- 104i,20n,117p,699b,918s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 104i,20n,117p,757b,918s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on conv_arithmetic.pdf (35 pages).
+Output written on conv_arithmetic.pdf (33 pages).
