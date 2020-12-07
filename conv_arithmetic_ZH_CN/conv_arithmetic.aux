@@ -39,4 +39,126 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {1.4}{\ignorespaces  另一种步长可视方法. 不是以$s = 2$ （左边）的增量去转换 $3 \times 3$ 的卷积核，而是以 $1$ 为增量进行转换，且只保留一个 $s = 2$ 的输出元素（右边）.\relax }}{9}{figure.caption.6}\protected@file@percent }
 \newlabel{fig:strides_subsampling}{{1.4}{9}{另一种步长可视方法. 不是以$s = 2$ （左边）的增量去转换 $3 \times 3$ 的卷积核，而是以 $1$ 为增量进行转换，且只保留一个 $s = 2$ 的输出元素（右边）.\relax }{figure.caption.6}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {1.2}池化}{10}{section.1.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {1.5}{\i
+\@writefile{lof}{\contentsline {figure}{\numberline {1.5}{\ignorespaces  使用$1 \times 1$步长计算$5 \times 5$输入、$3 \times 3$平均池化操作的输出值.\relax }}{11}{figure.caption.7}\protected@file@percent }
+\newlabel{fig:numerical_average_pooling}{{1.5}{11}{使用$1 \times 1$步长计算$5 \times 5$输入、$3 \times 3$平均池化操作的输出值.\relax }{figure.caption.7}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.6}{\ignorespaces  使用$1 \times 1$步长计算$5 \times 5$输入、$3 \times 3$最大值池化操作的输出值.\relax }}{11}{figure.caption.8}\protected@file@percent }
+\newlabel{fig:numerical_max_pooling}{{1.6}{11}{使用$1 \times 1$步长计算$5 \times 5$输入、$3 \times 3$最大值池化操作的输出值.\relax }{figure.caption.8}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {第二章\hspace  {.3em}}卷积运算}{12}{chapter.2}\protected@file@percent }
+\@writefile{lof}{\addvspace {10.0pt}}
+\@writefile{lot}{\addvspace {10.0pt}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.1}无零填充，单位步长}{12}{section.2.1}\protected@file@percent }
+\newlabel{rel:no_padding_no_strides}{{1}{13}{}{relationship.1}{}}
+\pgfsyspdfmark {pgfid4}{9782558}{40464733}
+\@writefile{toc}{\contentsline {section}{\numberline {2.2}有零填充，单位步长}{13}{section.2.2}\protected@file@percent }
+\newlabel{rel:arbitrary_padding_no_strides}{{2}{13}{}{relationship.2}{}}
+\pgfsyspdfmark {pgfid5}{9782558}{29922245}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.1}半填充(相似填充)}{13}{subsection.2.2.1}\protected@file@percent }
+\newlabel{rel:same_padding_no_strides}{{3}{13}{}{relationship.3}{}}
+\pgfsyspdfmark {pgfid6}{9782558}{15120468}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.2}全填充}{13}{subsection.2.2.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2.1}{\ignorespaces  (无零填充，单位步长) 用单位步长(即 $i = 4$, $k = 3$, $s = 1$ 和 $p = 0$)，将 $3 \times 3$ 的卷积核与 $4 \times 4$ 的输入做卷积.\relax }}{14}{figure.caption.9}\protected@file@percent }
+\newlabel{fig:no_padding_no_strides}{{2.1}{14}{(无零填充，单位步长) 用单位步长(即 $i = 4$, $k = 3$, $s = 1$ 和 $p = 0$)，将 $3 \times 3$ 的卷积核与 $4 \times 4$ 的输入做卷积.\relax }{figure.caption.9}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.2}{\ignorespaces  (任意填充, 单位步长) 用单位步长(即 $i = 5$, $k = 4$, $s = 1$ 和 $p = 2$)，将 $4 \times 4$ 的卷积核与 $5 \times 5$的输入做卷积，并用$2 \times 2$的零边界填充.\relax }}{14}{figure.caption.10}\protected@file@percent }
+\newlabel{fig:arbitrary_padding_no_strides}{{2.2}{14}{(任意填充, 单位步长) 用单位步长(即 $i = 5$, $k = 4$, $s = 1$ 和 $p = 2$)，将 $4 \times 4$ 的卷积核与 $5 \times 5$的输入做卷积，并用$2 \times 2$的零边界填充.\relax }{figure.caption.10}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.3}{\ignorespaces  (半填充, 单位步长) 用半填充和单位步长(即 $i = 5$, $k = 3$, $s = 1$ 和 $p = 2$)，将 $3 \times 3$ 的卷积核与 $5 \times 5$ 的输入做卷积.\relax }}{14}{figure.caption.11}\protected@file@percent }
+\newlabel{fig:same_padding_no_strides}{{2.3}{14}{(半填充, 单位步长) 用半填充和单位步长(即 $i = 5$, $k = 3$, $s = 1$ 和 $p = 2$)，将 $3 \times 3$ 的卷积核与 $5 \times 5$ 的输入做卷积.\relax }{figure.caption.11}{}}
+\newlabel{rel:full_padding_no_strides}{{4}{15}{}{relationship.4}{}}
+\pgfsyspdfmark {pgfid7}{9782558}{39163456}
+\@writefile{toc}{\contentsline {section}{\numberline {2.3}无零填充，非单位步长}{15}{section.2.3}\protected@file@percent }
+\newlabel{rel:no_padding_strides}{{5}{15}{}{relationship.5}{}}
+\pgfsyspdfmark {pgfid8}{9782558}{18042250}
+\@writefile{toc}{\contentsline {section}{\numberline {2.4}有零填充，非单位步长}{15}{section.2.4}\protected@file@percent }
+\newlabel{rel:padding_strides}{{6}{16}{}{relationship.6}{}}
+\pgfsyspdfmark {pgfid9}{9782558}{39857362}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.4}{\ignorespaces  (全填充，单位步长) 使用全填充和单位步长(即 $i = 5$, $k = 3$, $s = 1$ 和 $p = 2$)，将 $3 \times 3$ 的卷积核与 $5 \times 5$ 的输入做卷积.\relax }}{17}{figure.caption.12}\protected@file@percent }
+\newlabel{fig:full_padding_no_strides}{{2.4}{17}{(全填充，单位步长) 使用全填充和单位步长(即 $i = 5$, $k = 3$, $s = 1$ 和 $p = 2$)，将 $3 \times 3$ 的卷积核与 $5 \times 5$ 的输入做卷积.\relax }{figure.caption.12}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.5}{\ignorespaces  (无零填充，任意步长) 使用 $2 \times 2$ 步长 (即 $i = 5$, $k = 3$, $s = 2$ 和 $p = 0$) 将 $3 \times 3$ 的卷积核与 $5 \times 5$ 的输入做卷积.\relax }}{17}{figure.caption.13}\protected@file@percent }
+\newlabel{fig:no_padding_strides}{{2.5}{17}{(无零填充，任意步长) 使用 $2 \times 2$ 步长 (即 $i = 5$, $k = 3$, $s = 2$ 和 $p = 0$) 将 $3 \times 3$ 的卷积核与 $5 \times 5$ 的输入做卷积.\relax }{figure.caption.13}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.6}{\ignorespaces  (任意填充和步长) 使用$2 \times 2$ 步长 (即 $i = 5$, $k = 3$, $s = 2$ 和 $p = 1$) 将 $3 \times 3$ 的卷积核与填充了$1 \times 1$零边界的 $5 \times 5$ 输入做卷积. \relax }}{17}{figure.caption.14}\protected@file@percent }
+\newlabel{fig:padding_strides}{{2.6}{17}{(任意填充和步长) 使用$2 \times 2$ 步长 (即 $i = 5$, $k = 3$, $s = 2$ 和 $p = 1$) 将 $3 \times 3$ 的卷积核与填充了$1 \times 1$零边界的 $5 \times 5$ 输入做卷积. \relax }{figure.caption.14}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.7}{\ignorespaces  (任意填充和步长) 使用$2 \times 2$ 步长(即 $i = 6$, $k = 3$, $s = 2$ 且 $p = 1$)在 $6 \times 6$ 的输入上与 $3 \times 3$的卷积核做卷积，输入使用 $2 \times 2$ 的步长，并填充 $1 \times 1$ 的零边界. 在这个例子中，零填充的底行和右列不被卷积核覆盖.\relax }}{17}{figure.caption.15}\protected@file@percent }
+\newlabel{fig:padding_strides_odd}{{2.7}{17}{(任意填充和步长) 使用$2 \times 2$ 步长(即 $i = 6$, $k = 3$, $s = 2$ 且 $p = 1$)在 $6 \times 6$ 的输入上与 $3 \times 3$的卷积核做卷积，输入使用 $2 \times 2$ 的步长，并填充 $1 \times 1$ 的零边界. 在这个例子中，零填充的底行和右列不被卷积核覆盖.\relax }{figure.caption.15}{}}
+\newlabel{fig:no_padding_no_strides_explained}{{2.8a}{18}{卷积核必须向右滑动两步才能接触到输入的右侧（等价于向下）. 加一以说明初始卷积核位置，输出大小为 $3 \times 3$.\relax }{figure.caption.16}{}}
+\newlabel{sub@fig:no_padding_no_strides_explained}{{a}{18}{卷积核必须向右滑动两步才能接触到输入的右侧（等价于向下）. 加一以说明初始卷积核位置，输出大小为 $3 \times 3$.\relax }{figure.caption.16}{}}
+\newlabel{fig:no_padding_strides_explained}{{2.8b}{18}{内核必须向右滑动一步（大小为2）才能接触到输入的右侧（相当于向下）. 加一以说明初始卷积核的位置，输出大小为 $2 \times 2$.\relax }{figure.caption.16}{}}
+\newlabel{sub@fig:no_padding_strides_explained}{{b}{18}{内核必须向右滑动一步（大小为2）才能接触到输入的右侧（相当于向下）. 加一以说明初始卷积核的位置，输出大小为 $2 \times 2$.\relax }{figure.caption.16}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.8}{\ignorespaces 计算卷积核位置.\relax }}{18}{figure.caption.16}\protected@file@percent }
+\citation{boureau-cvpr-10,boureau-icml-10,boureau-iccv-11,ICML2011Saxe_551}
+\@writefile{toc}{\contentsline {chapter}{\numberline {第三章\hspace  {.3em}}池化运算}{19}{chapter.3}\protected@file@percent }
+\@writefile{lof}{\addvspace {10.0pt}}
+\@writefile{lot}{\addvspace {10.0pt}}
+\newlabel{rel:pooling}{{7}{19}{}{relationship.7}{}}
+\pgfsyspdfmark {pgfid12}{9782558}{21831636}
+\@writefile{toc}{\contentsline {chapter}{\numberline {第四章\hspace  {.3em}}转置卷积运算}{20}{chapter.4}\protected@file@percent }
+\@writefile{lof}{\addvspace {10.0pt}}
+\@writefile{lot}{\addvspace {10.0pt}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.1}作为矩阵运算的卷积}{20}{section.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}转置卷积}{21}{section.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.3}无零填充，单位步长，转置}{22}{section.4.3}\protected@file@percent }
+\newlabel{rel:no_padding_no_strides_transposed}{{8}{22}{}{relationship.8}{}}
+\pgfsyspdfmark {pgfid13}{9782558}{15751939}
+\@writefile{toc}{\contentsline {section}{\numberline {4.4}有零填充，单位步长，转置}{23}{section.4.4}\protected@file@percent }
+\newlabel{rel:arbitrary_padding_no_strides_transposed}{{9}{23}{}{relationship.9}{}}
+\pgfsyspdfmark {pgfid14}{9782558}{32989353}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.1}半(相似)填充，转置}{23}{subsection.4.4.1}\protected@file@percent }
+\newlabel{rel:half_padding_no_strides_transposed}{{10}{23}{}{relationship.10}{}}
+\pgfsyspdfmark {pgfid15}{9782558}{17844361}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.2}全填充，转置}{23}{subsection.4.4.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces  The transpose of convolving a $3 \times 3$ kernel over a $4 \times 4$ input using unit strides (即 $i = 4$, $k = 3$, $s = 1$ and $p = 0$). It is equivalent to convolving a $3 \times 3$ kernel over a $2 \times 2$ input padded with a $2 \times 2$ border of zeros using unit strides (即, $i' = 2$, $k' = k$, $s' = 1$ and $p' = 2$).\relax }}{24}{figure.caption.17}\protected@file@percent }
+\newlabel{fig:no_padding_no_strides_transposed}{{4.1}{24}{The transpose of convolving a $3 \times 3$ kernel over a $4 \times 4$ input using unit strides (即 $i = 4$, $k = 3$, $s = 1$ and $p = 0$). It is equivalent to convolving a $3 \times 3$ kernel over a $2 \times 2$ input padded with a $2 \times 2$ border of zeros using unit strides (即, $i' = 2$, $k' = k$, $s' = 1$ and $p' = 2$).\relax }{figure.caption.17}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces  The transpose of convolving a $4 \times 4$ kernel over a $5 \times 5$ input padded with a $2 \times 2$ border of zeros using unit strides (即, $i = 5$, $k = 4$, $s = 1$ and $p = 2$). It is equivalent to convolving a $4 \times 4$ kernel over a $6 \times 6$ input padded with a $1 \times 1$ border of zeros using unit strides (即 $i' = 6$, $k' = k$, $s' = 1$ 且 $p' = 1$).\relax }}{24}{figure.caption.18}\protected@file@percent }
+\newlabel{fig:arbitrary_padding_no_strides_transposed}{{4.2}{24}{The transpose of convolving a $4 \times 4$ kernel over a $5 \times 5$ input padded with a $2 \times 2$ border of zeros using unit strides (即, $i = 5$, $k = 4$, $s = 1$ and $p = 2$). It is equivalent to convolving a $4 \times 4$ kernel over a $6 \times 6$ input padded with a $1 \times 1$ border of zeros using unit strides (即 $i' = 6$, $k' = k$, $s' = 1$ 且 $p' = 1$).\relax }{figure.caption.18}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces  The transpose of convolving a $3 \times 3$ kernel over a $5 \times 5$ input using half padding and unit strides (即 $i = 5$, $k = 3$, $s = 1$ and $p = 1$). It is equivalent to convolving a $3 \times 3$ kernel over a $5 \times 5$ input using half padding and unit strides (即 $i' = 5$, $k' = k$, $s' = 1$ and $p' = 1$).\relax }}{24}{figure.caption.19}\protected@file@percent }
+\newlabel{fig:same_padding_no_strides_transposed}{{4.3}{24}{The transpose of convolving a $3 \times 3$ kernel over a $5 \times 5$ input using half padding and unit strides (即 $i = 5$, $k = 3$, $s = 1$ and $p = 1$). It is equivalent to convolving a $3 \times 3$ kernel over a $5 \times 5$ input using half padding and unit strides (即 $i' = 5$, $k' = k$, $s' = 1$ and $p' = 1$).\relax }{figure.caption.19}{}}
+\newlabel{rel:full_padding_no_strides_transposed}{{11}{25}{}{relationship.11}{}}
+\pgfsyspdfmark {pgfid16}{9782558}{37008442}
+\@writefile{toc}{\contentsline {section}{\numberline {4.5}无零填充，非单位步长，转置}{25}{section.4.5}\protected@file@percent }
+\newlabel{rel:no_padding_strides_transposed}{{12}{25}{}{relationship.12}{}}
+\pgfsyspdfmark {pgfid17}{9782558}{15957671}
+\@writefile{toc}{\contentsline {section}{\numberline {4.6}零填充，非单位步长，转置}{25}{section.4.6}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces  The transpose of convolving a $3 \times 3$ kernel over a $5 \times 5$ input using full padding and unit strides (即 $i = 5$, $k = 3$, $s = 1$ 且 $p = 2$). It is equivalent to convolving a $3 \times 3$ kernel over a $7 \times 7$ input using unit strides (即 $i' = 7$, $k' = k$, $s' = 1$ 且 $p' = 0$).\relax }}{26}{figure.caption.20}\protected@file@percent }
+\newlabel{fig:full_padding_no_strides_transposed}{{4.4}{26}{The transpose of convolving a $3 \times 3$ kernel over a $5 \times 5$ input using full padding and unit strides (即 $i = 5$, $k = 3$, $s = 1$ 且 $p = 2$). It is equivalent to convolving a $3 \times 3$ kernel over a $7 \times 7$ input using unit strides (即 $i' = 7$, $k' = k$, $s' = 1$ 且 $p' = 0$).\relax }{figure.caption.20}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.5}{\ignorespaces  The transpose of convolving a $3 \times 3$ kernel over a $5 \times 5$ input using $2 \times 2$ strides (即 $i = 5$, $k = 3$, $s = 2$ and $p = 0$). It is equivalent to convolving a $3 \times 3$ kernel over a $2 \times 2$ input (with $1$ zero inserted between inputs) padded with a $2 \times 2$ border of zeros using unit strides (即 $i' = 2$, $\tilde  {i}' = 3$, $k' = k$, $s' = 1$ and $p' = 2$).\relax }}{26}{figure.caption.21}\protected@file@percent }
+\newlabel{fig:no_padding_strides_transposed}{{4.5}{26}{The transpose of convolving a $3 \times 3$ kernel over a $5 \times 5$ input using $2 \times 2$ strides (即 $i = 5$, $k = 3$, $s = 2$ and $p = 0$). It is equivalent to convolving a $3 \times 3$ kernel over a $2 \times 2$ input (with $1$ zero inserted between inputs) padded with a $2 \times 2$ border of zeros using unit strides (即 $i' = 2$, $\tilde {i}' = 3$, $k' = k$, $s' = 1$ and $p' = 2$).\relax }{figure.caption.21}{}}
+\newlabel{rel:padding_strides_transposed}{{13}{27}{}{relationship.13}{}}
+\pgfsyspdfmark {pgfid18}{9782558}{36919099}
+\newlabel{rel:padding_strides_transposed_odd}{{14}{27}{}{relationship.14}{}}
+\pgfsyspdfmark {pgfid19}{9782558}{23442479}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.6}{\ignorespaces  The transpose of convolving a $3 \times 3$ kernel over a $5 \times 5$ input padded with a $1 \times 1$ border of zeros using $2 \times 2$ strides (即, $i = 5$, $k = 3$, $s = 2$ and $p = 1$). It is equivalent to convolving a $3 \times 3$ kernel over a $3 \times 3$ input (with $1$ zero inserted between inputs) padded with a $1 \times 1$ border of zeros using unit strides (即, $i' = 3$, $\tilde  {i}' = 5$, $k' = k$, $s' = 1$ and $p' = 1$).\relax }}{28}{figure.caption.22}\protected@file@percent }
+\newlabel{fig:padding_strides_transposed}{{4.6}{28}{The transpose of convolving a $3 \times 3$ kernel over a $5 \times 5$ input padded with a $1 \times 1$ border of zeros using $2 \times 2$ strides (即, $i = 5$, $k = 3$, $s = 2$ and $p = 1$). It is equivalent to convolving a $3 \times 3$ kernel over a $3 \times 3$ input (with $1$ zero inserted between inputs) padded with a $1 \times 1$ border of zeros using unit strides (即, $i' = 3$, $\tilde {i}' = 5$, $k' = k$, $s' = 1$ and $p' = 1$).\relax }{figure.caption.22}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.7}{\ignorespaces  The transpose of convolving a $3 \times 3$ kernel over a $6 \times 6$ input padded with a $1 \times 1$ border of zeros using $2 \times 2$ strides (即, $i = 6$, $k = 3$, $s = 2$ and $p = 1$). It is equivalent to convolving a $3 \times 3$ kernel over a $2 \times 2$ input (with $1$ zero inserted between inputs) padded with a $1 \times 1$ border of zeros (with an additional border of size $1$ added to the bottom and right edges) using unit strides (即, $i' = 3$, $\tilde  {i}' = 5$, $a = 1$, $k' = k$, $s' = 1$ and $p' = 1$).\relax }}{28}{figure.caption.23}\protected@file@percent }
+\newlabel{fig:padding_strides_odd_transposed}{{4.7}{28}{The transpose of convolving a $3 \times 3$ kernel over a $6 \times 6$ input padded with a $1 \times 1$ border of zeros using $2 \times 2$ strides (即, $i = 6$, $k = 3$, $s = 2$ and $p = 1$). It is equivalent to convolving a $3 \times 3$ kernel over a $2 \times 2$ input (with $1$ zero inserted between inputs) padded with a $1 \times 1$ border of zeros (with an additional border of size $1$ added to the bottom and right edges) using unit strides (即, $i' = 3$, $\tilde {i}' = 5$, $a = 1$, $k' = k$, $s' = 1$ and $p' = 1$).\relax }{figure.caption.23}{}}
+\citation{chen2014semantic,yu2015multi}
+\citation{oord2016wavenet}
+\bibdata{bibliography}
+\@writefile{toc}{\contentsline {chapter}{\numberline {第五章\hspace  {.3em}}其他卷积}{29}{chapter.5}\protected@file@percent }
+\@writefile{lof}{\addvspace {10.0pt}}
+\@writefile{lot}{\addvspace {10.0pt}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}扩张卷积}{29}{section.5.1}\protected@file@percent }
+\newlabel{rel:dilation}{{15}{29}{}{relationship.15}{}}
+\pgfsyspdfmark {pgfid20}{9782558}{7844659}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces  (Dilated convolution) 将一个 $3 \times 3$ 的卷积核卷积到一个扩张因子为2(即 $i = 7$, $k = 3$, $d = 2$, $s = 1$ and $p = 0$)的 $7 \times 7$ 输入上.\relax }}{30}{figure.caption.24}\protected@file@percent }
+\newlabel{fig:dilation}{{5.1}{30}{(Dilated convolution) 将一个 $3 \times 3$ 的卷积核卷积到一个扩张因子为2(即 $i = 7$, $k = 3$, $d = 2$, $s = 1$ and $p = 0$)的 $7 \times 7$ 输入上.\relax }{figure.caption.24}{}}
+\bibcite{abaditensorflow}{{1}{2015}{{Abadi {\em  et~al.}}}{{Abadi, Agarwal, Barham, Brevdo, Chen, Citro, Corrado, Davis, Dean, Devin, {\em  et~al.}}}}
+\bibcite{bastien2012theano}{{2}{2012}{{Bastien {\em  et~al.}}}{{Bastien, Lamblin, Pascanu, Bergstra, Goodfellow, Bergeron, Bouchard, Warde-Farley, and Bengio}}}
+\bibcite{bergstra2010theano}{{3}{2010}{{Bergstra {\em  et~al.}}}{{Bergstra, Breuleux, Bastien, Lamblin, Pascanu, Desjardins, Turian, Warde-Farley, and Bengio}}}
+\bibcite{boureau-cvpr-10}{{4}{2010a}{{Boureau {\em  et~al.}}}{{Boureau, Bach, LeCun, and Ponce}}}
+\bibcite{boureau-icml-10}{{5}{2010b}{{Boureau {\em  et~al.}}}{{Boureau, Ponce, and LeCun}}}
+\bibcite{boureau-iccv-11}{{6}{2011}{{Boureau {\em  et~al.}}}{{Boureau, {Le Roux}, Bach, Ponce, and LeCun}}}
+\bibcite{chen2014semantic}{{7}{2014}{{Chen {\em  et~al.}}}{{Chen, Papandreou, Kokkinos, Murphy, and Yuille}}}
+\bibcite{collobert2011torch7}{{8}{2011}{{Collobert {\em  et~al.}}}{{Collobert, Kavukcuoglu, and Farabet}}}
+\bibcite{Goodfellow-et-al-2016-Book}{{9}{2016}{{Goodfellow {\em  et~al.}}}{{Goodfellow, Bengio, and Courville}}}
+\bibcite{im2016generating}{{10}{2016}{{Im {\em  et~al.}}}{{Im, Kim, Jiang, and Memisevic}}}
+\bibcite{jia2014caffe}{{11}{2014}{{Jia {\em  et~al.}}}{{Jia, Shelhamer, Donahue, Karayev, Long, Girshick, Guadarrama, and Darrell}}}
+\bibcite{krizhevsky2012imagenet}{{12}{2012}{{Krizhevsky {\em  et~al.}}}{{Krizhevsky, Sutskever, and Hinton}}}
+\bibcite{le1997reading}{{13}{1997}{{Le~Cun {\em  et~al.}}}{{Le~Cun, Bottou, and Bengio}}}
+\bibcite{long2015fully}{{14}{2015}{{Long {\em  et~al.}}}{{Long, Shelhamer, and Darrell}}}
+\bibcite{oord2016wavenet}{{15}{2016}{{Oord {\em  et~al.}}}{{Oord, Dieleman, Zen, Simonyan, Vinyals, Graves, Kalchbrenner, Senior, and Kavukcuoglu}}}
+\bibcite{radford2015unsupervised}{{16}{2015}{{Radford {\em  et~al.}}}{{Radford, Metz, and Chintala}}}
+\bibcite{ICML2011Saxe_551}{{17}{2011}{{Saxe {\em  et~al.}}}{{Saxe, Koh, Chen, Bhand, Suresh, and Ng}}}
+\bibcite{visin15}{{18}{2015}{{Visin {\em  et~al.}}}{{Visin, Kastner, Courville, Bengio, Matteucci, and Cho}}}
+\bibcite{yu2015multi}{{19}{2015}{{Yu and Koltun}}{{Yu and Koltun}}}
+\bibcite{zeiler2014visualizing}{{20}{2014}{{Zeiler and Fergus}}{{Zeiler and Fergus}}}
+\bibcite{zeiler2011adaptive}{{21}{2011}{{Zeiler {\em  et~al.}}}{{Zeiler, Taylor, and Fergus}}}
+\bibstyle{natbib}
+\gdef \@abspage@last{33}

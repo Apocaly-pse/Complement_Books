@@ -1,0 +1,22 @@
+\contentsline {chapter}{\numberline {第一章\hspace {.3em}}引言}{5}{chapter.1}%
+\contentsline {section}{\numberline {1.1}离散卷积}{6}{section.1.1}%
+\contentsline {section}{\numberline {1.2}池化}{10}{section.1.2}%
+\contentsline {chapter}{\numberline {第二章\hspace {.3em}}卷积运算}{12}{chapter.2}%
+\contentsline {section}{\numberline {2.1}无零填充，单位步长}{12}{section.2.1}%
+\contentsline {section}{\numberline {2.2}有零填充，单位步长}{13}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}半填充(相似填充)}{13}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}全填充}{13}{subsection.2.2.2}%
+\contentsline {section}{\numberline {2.3}无零填充，非单位步长}{15}{section.2.3}%
+\contentsline {section}{\numberline {2.4}有零填充，非单位步长}{15}{section.2.4}%
+\contentsline {chapter}{\numberline {第三章\hspace {.3em}}池化运算}{19}{chapter.3}%
+\contentsline {chapter}{\numberline {第四章\hspace {.3em}}转置卷积运算}{20}{chapter.4}%
+\contentsline {section}{\numberline {4.1}作为矩阵运算的卷积}{20}{section.4.1}%
+\contentsline {section}{\numberline {4.2}转置卷积}{21}{section.4.2}%
+\contentsline {section}{\numberline {4.3}无零填充，单位步长，转置}{22}{section.4.3}%
+\contentsline {section}{\numberline {4.4}有零填充，单位步长，转置}{23}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}半(相似)填充，转置}{23}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}全填充，转置}{23}{subsection.4.4.2}%
+\contentsline {section}{\numberline {4.5}无零填充，非单位步长，转置}{25}{section.4.5}%
+\contentsline {section}{\numberline {4.6}零填充，非单位步长，转置}{25}{section.4.6}%
+\contentsline {chapter}{\numberline {第五章\hspace {.3em}}其他卷积}{29}{chapter.5}%
+\contentsline {section}{\numberline {5.1}扩张卷积}{29}{section.5.1}%
