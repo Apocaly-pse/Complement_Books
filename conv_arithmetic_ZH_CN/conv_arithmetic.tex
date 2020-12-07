@@ -900,38 +900,23 @@ of the input，且其输出大小为
 
 \section{扩张卷积}
 
-Readers familiar with the deep learning literature may have noticed the term
-``dilated convolutions'' (or ``atrous convolutions'', from the French expression
-{\em convolutions \`{a} trous}) appear in recent papers. Here we attempt to
-provide an intuitive understanding of dilated convolutions. For a more in-depth
-description and to understand in what contexts they are applied, see
-\citet{chen2014semantic,yu2015multi}.
+熟悉深度学习文献的读者可能已经注意到最近的论文中出现了术语
+``扩张卷积(dilated convolutions)'' (或 ``空洞卷积(atrous convolutions)'', 源自法语表达{\em convolutions \`{a} trous}). 这里我们试图对扩张卷积有一个直观的理解. 有关更深入的描述及了解它们在什么场景中应用，请参见 \citet{chen2014semantic,yu2015multi}.
 
-Dilated convolutions ``inflate'' the kernel by inserting spaces between the
-kernel elements. The dilation ``rate'' is controlled by an additional
-hyperparameter $d$. Implementations may vary, but there are usually $d - 1$
-spaces inserted between kernel elements such that $d = 1$ corresponds to a
-regular convolution.
+扩张卷积通过在核元素之间插入空格来 ``膨胀(inflate)'' 卷积核. 膨胀 ``率'' 由额外的超参数 $d$ 控制. 实现起来可能会有所不同，但是通常在卷积核元素之间插入 $d - 1$
+个空格，这样 $d = 1$就对应于一个常规卷积.
 
-Dilated convolutions are used to cheaply increase the receptive field of output
-units without increasing the kernel size, which is especially effective
-when multiple dilated convolutions are stacked one after another. For a
-concrete example, see \citet{oord2016wavenet}, in which the proposed WaveNet
-model implements an autoregressive generative model for raw audio which uses
-dilated convolutions to condition new audio frames on a large context of past
-audio frames.
+扩张卷积被用来在不增加卷积核大小的情况下，以较低的代价增加输出单元的感受野，当多个扩张卷积一个接一个堆叠时，这一点尤其有效. 一个具体的例子请看 \citet{oord2016wavenet}，其中提出的WaveNet模型为原始音频实现了自回归生成模型，该模型使用扩张卷积在过去音频帧的前提下调节新音频帧.
 
-To understand the relationship tying the dilation rate $d$ and the output size
-$o$, it is useful to think of the impact of $d$ on the {\em effective kernel
-size}. A kernel of size $k$ dilated by a factor $d$ has an effective size
+为了理解扩张率$d$ 和输出大小$o$之间的关系，可以考虑一下 $d$ 对 {\em 有效内核大小}(effective kernel
+size) 的影响. 一个大小为 $k$ 的卷积核被一个因子 $d$ 放大，就有一个有效的大小
 \begin{equation*}
     \hat{k} = k + (k - 1)(d - 1).
 \end{equation*}
-This can be combined with \autoref{rel:padding_strides} to form the following
-relationship for dilated convolutions:
+这可以与 \autoref{rel:padding_strides} 结合，形成以下扩张卷积关系:
 
 \begin{relationship}\label{rel:dilation}
-For any $i$, $k$, $p$ and $s$, and for a dilation rate $d$,
+对任意 $i$, $k$, $p$ 和 $s$, 并对扩张率 $d$,
 \begin{equation*}
     o = \left\lfloor \frac{i + 2p - k - (k - 1)(d - 1)}{s} \right\rfloor + 1.
 \end{equation*}
@@ -944,13 +929,11 @@ For any $i$, $k$, $p$ and $s$, and for a dilation rate $d$,
     \includegraphics[width=0.24\textwidth]{pdf/dilation_02.pdf}
     \includegraphics[width=0.24\textwidth]{pdf/dilation_03.pdf}
     \caption{\label{fig:dilation} (Dilated convolution)
-        Convolving a $3 \times 3$ kernel over a $7 \times 7$ input with a
-        dilation factor of 2 (即, $i = 7$, $k = 3$, $d = 2$, $s = 1$ and
-        $p = 0$).}
+    将一个 $3 \times 3$ 的卷积核卷积到一个扩张因子为2(即 $i = 7$, $k = 3$, $d = 2$, $s = 1$ and $p = 0$)的 $7 \times 7$ 输入上.}
 \end{figure}
 
-\noindent \autoref{fig:dilation} provides an example for $i = 7$, $k = 3$ and
-$d = 2$.
+\noindent \autoref{fig:dilation} 给出了当 $i = 7$, $k = 3$ 和
+$d = 2$ 时的一个例子.
 
 \bibliography{bibliography}
 \bibliographystyle{natbib}
