@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (MiKTeX 20.11) (preloaded format=xelatex 2020.11.14)  7 DEC 2020 20:15
+This is XeTeX, Version 3.14159265-2.6-0.999992 (MiKTeX 20.11) (preloaded format=xelatex 2020.11.14)  8 DEC 2020 16:40
 entering extended mode
 **D:/Desktop/CODE_TEST/Complement_Books/conv_arithmetic_ZH_CN/conv_arithmetic.t
 ex
@@ -1373,14 +1373,14 @@ File: pdf/same_padding_no_strides_transposed_03.pdf Graphic file (type pdf)
 <use pdf/same_padding_no_strides_transposed_03.pdf>
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 747.
+(mdframed)              on input line 734.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 767.
+(mdframed)              on input line 753.
  [23] [24]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 793.
+(mdframed)              on input line 777.
 File: pdf/full_padding_no_strides_transposed_00.pdf Graphic file (type pdf)
 <use pdf/full_padding_no_strides_transposed_00.pdf>
 File: pdf/full_padding_no_strides_transposed_01.pdf Graphic file (type pdf)
@@ -1407,11 +1407,11 @@ File: pdf/padding_strides_transposed_03.pdf Graphic file (type pdf)
 <use pdf/padding_strides_transposed_03.pdf>
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 852.
+(mdframed)              on input line 822.
  [25] [26]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 866.
+(mdframed)              on input line 836.
 File: pdf/padding_strides_odd_transposed_00.pdf Graphic file (type pdf)
 <use pdf/padding_strides_odd_transposed_00.pdf>
 File: pdf/padding_strides_odd_transposed_01.pdf Graphic file (type pdf)
@@ -1424,7 +1424,7 @@ File: pdf/padding_strides_odd_transposed_03.pdf Graphic file (type pdf)
 第五章
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 918.
+(mdframed)              on input line 878.
 File: pdf/dilation_00.pdf Graphic file (type pdf)
 <use pdf/dilation_00.pdf>
 File: pdf/dilation_01.pdf Graphic file (type pdf)
@@ -1442,15 +1442,15 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 ] [32]) [33] (conv_arithmetic.aux)
 Package rerunfilecheck Info: File `conv_arithmetic.out' has not changed.
-(rerunfilecheck)             Checksum: AFB70DF6EF0407395A05820A25D9FA7D;2438.
+(rerunfilecheck)             Checksum: 7DC035563797B3023FD0C5C2A6DCC53F;2454.
  ) 
 Here is how much of TeX's memory you used:
  31739 strings out of 412197
  681948 string characters out of 2856842
- 1034108 words of memory out of 3000000
+ 1034104 words of memory out of 3000000
  50615 multiletter control sequences out of 15000+200000
  616919 words of font info for 137 fonts, out of 3000000 for 9000
  1348 hyphenation exceptions out of 8191
- 104i,20n,117p,757b,918s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 104i,20n,117p,546b,918s stack positions out of 5000i,500n,10000p,200000b,50000s
 
 Output written on conv_arithmetic.pdf (33 pages).

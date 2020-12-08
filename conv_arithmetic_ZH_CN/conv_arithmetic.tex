@@ -703,12 +703,8 @@ p - 1$ 描述的转置卷积相关联. 且其输出大小为
     \includegraphics[width=0.24\textwidth]{pdf/no_padding_no_strides_transposed_01.pdf}
     \includegraphics[width=0.24\textwidth]{pdf/no_padding_no_strides_transposed_02.pdf}
     \includegraphics[width=0.24\textwidth]{pdf/no_padding_no_strides_transposed_03.pdf}
-    \caption{\label{fig:no_padding_no_strides_transposed} The transpose of
-        convolving a $3 \times 3$ kernel over a $4 \times 4$ input using unit
-        strides (即 $i = 4$, $k = 3$, $s = 1$ and $p = 0$). It is equivalent
-        to convolving a $3 \times 3$ kernel over a $2 \times 2$ input padded
-        with a $2 \times 2$ border of zeros using unit strides (即, $i' = 2$,
-        $k' = k$, $s' = 1$ and $p' = 2$).}
+    \caption{\label{fig:no_padding_no_strides_transposed} 
+    一个 $3 \times 3$ 卷积核与一个使用了单位步长(即 $i = 4$, $k = 3$, $s = 1$ 和 $p = 0$)的 $4 \times 4$ 输入做转置卷积. 等价于一个 $3 \times 3$ 卷积核与一个使用了单位步长且填充 $2 \times 2$ 零边界(即 $i' = 2$, $k' = k$, $s' = 1$ 且 $p' = 2$)的 $2 \times 2$ 输入做卷积 .}
 \end{figure}
 
 \begin{figure}[p]
@@ -717,13 +713,8 @@ p - 1$ 描述的转置卷积相关联. 且其输出大小为
     \includegraphics[width=0.24\textwidth]{pdf/arbitrary_padding_no_strides_transposed_01.pdf}
     \includegraphics[width=0.24\textwidth]{pdf/arbitrary_padding_no_strides_transposed_02.pdf}
     \includegraphics[width=0.24\textwidth]{pdf/arbitrary_padding_no_strides_transposed_03.pdf}
-    \caption{\label{fig:arbitrary_padding_no_strides_transposed} The transpose
-        of convolving a $4 \times 4$ kernel over a $5 \times 5$ input padded
-        with a $2 \times 2$ border of zeros using unit strides (即, $i = 5$,
-        $k = 4$, $s = 1$ and $p = 2$). It is equivalent to convolving a $4
-        \times 4$ kernel over a $6 \times 6$ input padded with a $1 \times 1$
-        border of zeros using unit strides (即 $i' = 6$, $k' = k$, $s' = 1$
-        且 $p' = 1$).}
+    \caption{\label{fig:arbitrary_padding_no_strides_transposed} 
+    一个 $4 \times 4$ 卷积核与一个应用了单位步长且填充$2 \times 2$零边界(即 $i = 5$, $k = 4$, $s = 1$ 和 $p = 2$)的 $5 \times 5$ 输入做转置卷积. 等价于一个 $4 \times 4$ 卷积核与一个应用单位步长且填充了$1 \times 1$零边界 (即 $i' = 6$, $k' = k$, $s' = 1$ 且 $p' = 1$)的 $6 \times 6$ 输入做卷积.}
 \end{figure}
 
 \begin{figure}[p]
@@ -732,22 +723,17 @@ p - 1$ 描述的转置卷积相关联. 且其输出大小为
     \includegraphics[width=0.24\textwidth]{pdf/same_padding_no_strides_transposed_01.pdf}
     \includegraphics[width=0.24\textwidth]{pdf/same_padding_no_strides_transposed_02.pdf}
     \includegraphics[width=0.24\textwidth]{pdf/same_padding_no_strides_transposed_03.pdf}
-    \caption{\label{fig:same_padding_no_strides_transposed} The transpose of
-        convolving a $3 \times 3$ kernel over a $5 \times 5$ input using half
-        padding and unit strides (即 $i = 5$, $k = 3$, $s = 1$ and $p = 1$).
-        It is equivalent to convolving a $3 \times 3$ kernel over a $5 \times 5$
-        input using half padding and unit strides (即 $i' = 5$, $k' = k$, $s'
-        = 1$ and $p' = 1$).}
+    \caption{\label{fig:same_padding_no_strides_transposed} 
+    一个 $3 \times 3$ 卷积核与一个应用半填充和单位步长(即 $i = 5$, $k = 3$, $s = 1$ 和 $p = 1$)的 $5 \times 5$ 输入做转置卷积. 等价于一个 $3 \times 3$ 卷积核与一个使用半填充和单位步长(即 $i' = 5$, $k' = k$, $s' = 1$ 且 $p' = 1$)的$5 \times 5$输入做卷积.}
 \end{figure}
 
-\subsection{半(相似)填充，转置}
+\subsection{半填充(相似填充)，转置}
 
 通过应用与前面相同的归纳推理，可以合理推测半填充卷积转置的等效卷积就是半填充卷积自身，因为半填充卷积的输出大小与其输入大小相同. 因此，以下关系适用:
 
 \begin{relationship}\label{rel:half_padding_no_strides_transposed}
-A convolution described by $k = 2n + 1, \quad n \in \mathbb{N}$, $s = 1$ and $p
-= \lfloor k / 2 \rfloor = n$ has an associated transposed convolution described
-by $k' = k$, $s' = s$ and $p' = p$ and its output size is
+一个由 $k = 2n + 1, \quad n \in \mathbb{N}$, $s = 1$ 和 $p
+= \lfloor k / 2 \rfloor = n$ 描述的卷积与一个由 $k' = k$, $s' = s$ 和 $p' = p$描述的转置卷积相关联，且其输出大小为 
 \begin{equation*}
 \begin{split}
     o' &= i' + (k - 1) - 2p \\
@@ -765,9 +751,7 @@ by $k' = k$, $s' = s$ and $p' = p$ and its output size is
 已知非填充转置卷积的等价卷积涉及全填充，所以全填充转置卷积的等价卷积是非填充卷积就不足为奇了:
 
 \begin{relationship}\label{rel:full_padding_no_strides_transposed}
-一种卷积被描述为 $s = 1$, $k$ 和 $p = k - 1$ has an
-associated transposed convolution described by $k' = k$, $s' = s$ and $p' = 0$
-and its output size is
+一个由 $s = 1$, $k$ 和 $p = k - 1$ 描述的卷积与一个由$k' = k$, $s' = s$ 和 $p' = 0$描述的转置卷积相关联，且其输出大小为 
 \begin{equation*}
 \begin{split}
     o' &= i' + (k - 1) - 2p \\
@@ -805,12 +789,8 @@ and its output size is
     \includegraphics[width=0.24\textwidth]{pdf/full_padding_no_strides_transposed_01.pdf}
     \includegraphics[width=0.24\textwidth]{pdf/full_padding_no_strides_transposed_02.pdf}
     \includegraphics[width=0.24\textwidth]{pdf/full_padding_no_strides_transposed_03.pdf}
-    \caption{\label{fig:full_padding_no_strides_transposed} The transpose of
-        convolving a $3 \times 3$ kernel over a $5 \times 5$ input using full
-        padding and unit strides (即 $i = 5$, $k = 3$, $s = 1$ 且 $p = 2$).
-        It is equivalent to convolving a $3 \times 3$ kernel over a $7 \times 7$
-        input using unit strides (即 $i' = 7$, $k' = k$, $s' = 1$ 且 $p' =
-        0$).}
+    \caption{\label{fig:full_padding_no_strides_transposed} 
+    一个 $3 \times 3$ 的卷积核与一个应用了单位步长和全填充(即 $i = 5$, $k = 3$, $s = 1$ 且 $p = 2$)的 $5 \times 5$ 输入做转置卷积. 等价于一个 $3 \times 3$ 卷积核与一个使用单位步长(即 $i' = 7$, $k' = k$, $s' = 1$ 且 $p' = 0$)的 $7 \times 7$ 输入做卷积.}
 \end{figure}
 
 \begin{figure}[p]
@@ -819,13 +799,8 @@ and its output size is
     \includegraphics[width=0.24\textwidth]{pdf/no_padding_strides_transposed_01.pdf}
     \includegraphics[width=0.24\textwidth]{pdf/no_padding_strides_transposed_02.pdf}
     \includegraphics[width=0.24\textwidth]{pdf/no_padding_strides_transposed_03.pdf}
-    \caption{\label{fig:no_padding_strides_transposed} The transpose of
-        convolving a $3 \times 3$ kernel over a $5 \times 5$ input using $2
-        \times 2$ strides (即 $i = 5$, $k = 3$, $s = 2$ and $p = 0$). It is
-        equivalent to convolving a $3 \times 3$ kernel over a $2 \times 2$ input
-        (with $1$ zero inserted between inputs) padded with a $2 \times 2$
-        border of zeros using unit strides (即 $i' = 2$, $\tilde{i}' = 3$, $k'
-        = k$, $s' = 1$ and $p' = 2$).}
+    \caption{\label{fig:no_padding_strides_transposed} 
+    一个 $3 \times 3$ 卷积核与一个应用$2 \times 2$步长(即 $i = 5$, $k = 3$, $s = 2$ 和 $p = 0$)的 $5 \times 5$ 输入做转置卷积. 等价于一个 $3 \times 3$ 卷积核与一个应用单位步长且填充了$2 \times 2$零边界(即 $i' = 2$, $\tilde{i}' = 3$, $k' = k$, $s' = 1$ and $p' = 2$) 的 $2 \times 2$ 输入(在输入之间插入 $1$ 个零)做卷积.}
 \end{figure}
 
 \begin{figure}[p]
@@ -834,13 +809,8 @@ and its output size is
     \includegraphics[width=0.24\textwidth]{pdf/padding_strides_transposed_01.pdf}
     \includegraphics[width=0.24\textwidth]{pdf/padding_strides_transposed_02.pdf}
     \includegraphics[width=0.24\textwidth]{pdf/padding_strides_transposed_03.pdf}
-    \caption{\label{fig:padding_strides_transposed} The transpose of convolving
-        a $3 \times 3$ kernel over a $5 \times 5$ input padded with a $1 \times
-        1$ border of zeros using $2 \times 2$ strides (即, $i = 5$, $k = 3$, $s
-        = 2$ and $p = 1$). It is equivalent to convolving a $3 \times 3$ kernel
-        over a $3 \times 3$ input (with $1$ zero inserted between inputs) padded
-        with a $1 \times 1$ border of zeros using unit strides (即, $i' = 3$,
-        $\tilde{i}' = 5$, $k' = k$, $s' = 1$ and $p' = 1$).}
+    \caption{\label{fig:padding_strides_transposed} 
+    一个 $3 \times 3$ 卷积核与一个使用$2 \times 2$步长且填充了$1 \times 1$零边界(即 $i = 5$, $k = 3$, $s = 2$ 且 $p = 1$)的 $5 \times 5$ 输入做转置卷积. 等价于一个 $3 \times 3$ 卷积核与一个使用了单位步长且填充$1 \times 1$零边界(即 $i' = 3$, $\tilde{i}' = 5$, $k' = k$, $s' = 1$ 且 $p' = 1$)的 $3 \times 3$ 输入(在输入之间插入 $1$ 个零)做卷积.}
 \end{figure}
 
 \section{零填充，非单位步长，转置} 
@@ -850,7 +820,7 @@ and its output size is
 \autoref{rel:no_padding_strides_transposed}将分析扩展到零填充的情况:
 
 \begin{relationship}\label{rel:padding_strides_transposed}
-一种由 $k$, $s$ 和 $p$ 描述的卷积，其输入大小 $i$ 使得 $i + 2p - k$ 是 $s$ 的倍数，它有一个由 $\tilde{i}'$, $k' = k$, $s' = 1$ 和 $p' = k - p - 1$ 描述的相关转置卷积, 其中 $\tilde{i}'$ 是通过在每个输入单元之间添加 $s - 1$ 个零得到的扩展输入的大小，其输出大小为
+一个由 $k$, $s$ 和 $p$ 描述的卷积，其输入大小 $i$ 使 $i + 2p - k$ 是 $s$ 的倍数，它有一个由 $\tilde{i}'$, $k' = k$, $s' = 1$ 和 $p' = k - p - 1$ 描述的相关转置卷积, 其中 $\tilde{i}'$ 是通过在每个输入单元之间添加 $s - 1$ 个零得到的扩展输入的大小，其输出大小为
 \begin{equation*}
 \begin{split}
     o' = s (i' - 1) + k - 2p.
@@ -864,11 +834,8 @@ and its output size is
 输入 $i$ 大小的约束条件可以通过引入另一个参数 $a \in \{0, \ldots, s - 1\}$ 来放宽，该参数允许区分在$s$不同的情况下，所有结果都导致相同的 $i'$:
 
 \begin{relationship}\label{rel:padding_strides_transposed_odd}
-一种由 $k$, $s$ 和 $p$ 描述的卷积，has an
-associated transposed convolution described by $a$, $\tilde{i}'$, $k' = k$, $s' = 1$ 且 $p' = k - p - 1$, where $\tilde{i}'$ is the size of the stretched
-input obtained by adding $s - 1$ zeros between each input unit, and $a = (i +
-2p - k) \mod s$ represents the number of zeros added to the bottom and right edges
-of the input，且其输出大小为
+一种由 $k$, $s$ 和 $p$ 描述的卷积，与一个由 $a$, $\tilde{i}'$, $k' = k$, $s' = 1$ 和 $p' = k - p - 1$描述的转置卷积相关联，其中 $\tilde{i}'$ 是通过在每个输入单元之间添加 $s - 1$ 个零而获得的扩展输入大小，而 $a = (i +
+2p - k) \mod s$ 表示添加到输入的下边与右边的零的个数，且其输出大小为
 \begin{equation*}
 \begin{split}
     o' = s (i' - 1) + a + k - 2p.
@@ -885,15 +852,8 @@ of the input，且其输出大小为
     \includegraphics[width=0.24\textwidth]{pdf/padding_strides_odd_transposed_01.pdf}
     \includegraphics[width=0.24\textwidth]{pdf/padding_strides_odd_transposed_02.pdf}
     \includegraphics[width=0.24\textwidth]{pdf/padding_strides_odd_transposed_03.pdf}
-    \caption{\label{fig:padding_strides_odd_transposed} The transpose of
-        convolving a $3 \times 3$ kernel over a $6 \times 6$ input padded with a
-        $1 \times 1$ border of zeros using $2 \times 2$ strides (即, $i = 6$,
-        $k = 3$, $s = 2$ and $p = 1$). It is equivalent to convolving a $3
-        \times 3$ kernel over a $2 \times 2$ input (with $1$ zero inserted
-        between inputs) padded with a $1 \times 1$ border of zeros (with an
-        additional border of size $1$ added to the bottom and right edges) using
-        unit strides (即, $i' = 3$, $\tilde{i}' = 5$, $a = 1$, $k' = k$, $s' =
-        1$ and $p' = 1$).}
+    \caption{\label{fig:padding_strides_odd_transposed} 
+    一个 $3 \times 3$ 的卷积核与一个使用 $2 \times 2$ 步长且填充 $1 \times 1$ 零边界(即 $i = 6$, $k = 3$, $s = 2$ 和 $p = 1$)的 $6 \times 6$ 输入做转置卷积 . 等价于一个 $3 \times 3$ 卷积核与一个使用了单位步长(即 $i' = 3$, $\tilde{i}' = 5$, $a = 1$, $k' = k$, $s' = 1$ 且 $p' = 1$) 且填充 $1 \times 1$ 零边界(在底部和右边添加了一个大小为 $1$ 的边框)的 $2 \times 2$ 输入 (在输入之间插入 $1$ 个零)做卷积.}
 \end{figure}
 
 \chapter{其他卷积}

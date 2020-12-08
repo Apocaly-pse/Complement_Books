@@ -14,7 +14,7 @@
 \contentsline {section}{\numberline {4.2}转置卷积}{21}{section.4.2}%
 \contentsline {section}{\numberline {4.3}无零填充，单位步长，转置}{22}{section.4.3}%
 \contentsline {section}{\numberline {4.4}有零填充，单位步长，转置}{23}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}半(相似)填充，转置}{23}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.1}半填充(相似填充)，转置}{23}{subsection.4.4.1}%
 \contentsline {subsection}{\numberline {4.4.2}全填充，转置}{23}{subsection.4.4.2}%
 \contentsline {section}{\numberline {4.5}无零填充，非单位步长，转置}{25}{section.4.5}%
 \contentsline {section}{\numberline {4.6}零填充，非单位步长，转置}{25}{section.4.6}%
