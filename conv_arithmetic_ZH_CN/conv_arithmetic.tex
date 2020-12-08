@@ -108,7 +108,7 @@ citecolor=red]{hyperref}
 深度卷积神经网络 (CNNs) 一直是深度学习取得巨大进步的核心. 尽管卷积神经网络在九十年代就被用来解决字符识别任务\citep{le1997reading}，它们当前的广泛应用是由于最近的工作，当时一个深层CNN被用来打败最先进的ImageNet图像分类挑战\citep{krizhevsky2012imagenet}.
 
 因此卷积神经网络为机器学习的专业人士构建了一个非常有用的工具. 然而，第一次学习使用卷积神经网络通常是一种``可怕''的经历. 一个卷积层的输出形状受它的输入形状及卷积核的形状、零填充和步长的选择所影响，并且这些特性之间的关系不可忽视. 这不同于输出尺寸依赖于输入尺寸的全连接层. 另外，卷积神经网络通常还具有一个 {\em
-池化\/}(pooling) 阶段，对全连接网络来说增加了另一层的复杂性. 最后，所谓的转置卷积层（也被称为分步卷积层）近期已经在越来越多的工作\citep{zeiler2011adaptive,zeiler2014visualizing,
+池化\/}(pooling) 阶段，对全连接网络来说增加了另一层的复杂性. 最后，所谓的转置卷积层（也被称为分数步长卷积层）近期已经在越来越多的工作\citep{zeiler2011adaptive,zeiler2014visualizing,
 long2015fully,radford2015unsupervised,visin15,im2016generating}, 中被采用，并且它们与卷积层的关系已经从多个角度解释清楚了. 
 
 本指南的目标有两个:
@@ -217,7 +217,7 @@ Tensorflow \citep{abaditensorflow} 和 Caffe \citep{jia2014caffe}.
 \noindent 例如, \autoref{fig:numerical_padding_strides} 展示了一个应用于$5 \times 5$输入的 $3
 \times 3$ 卷积核，使用了 $2 \times 2$ 的步长填充了$1\times 1$的零边界.
 
-注意，步长构成了一种 \emph{子采样}(subsampling) 形式. 步长作为衡量核被翻译多少的一种替代方法，它也可以看作保留了多少输出. 例如，以两个跃点移动卷积核相当于以一个跃点移动卷积核，但只保留奇数个输出元素 (\autoref{fig:strides_subsampling}).
+注意，步长构成了一种 \emph{子采样}(subsampling) 形式. 步长作为衡量核被变换多少的一种替代方法，它也可以看作保留了多少输出. 例如，以两个跃点移动卷积核相当于以一个跃点移动卷积核，但只保留奇数个输出元素 (\autoref{fig:strides_subsampling}).
 
 \begin{figure}[p]
     \centering
@@ -580,14 +580,14 @@ $i = 5$, $k = 3$ 且 (因此) $p = 1$ 时的一个例子.
             \draw[draw=base03, ->, thick] (1.5,2.5) to  (1.5,0.5);
         \end{tikzpicture}
         \caption{\label{fig:no_padding_strides_explained} 
-        内核必须向右滑动一步（大小为2）才能接触到输入的右侧（相当于向下）. 加一以说明初始卷积核的位置，输出大小为 $2 \times 2$.}
+        卷积核必须向右滑动一步（大小为2）才能接触到输入的右侧（相当于向下）. 加一以说明初始卷积核的位置，输出大小为 $2 \times 2$.}
     \end{subfigure}
     \caption{计算卷积核位置.}
 \end{figure}
 
 \chapter{池化运算}
 
-在神经网络中，池化层对输入的微小转换满足不变性. 最常见的一种池化是\emph{最大值池化}(max pooling)，它包括将输入拆分为（通常不重叠）块并输出每个块的最大值. 其他类型的池化也存在，例如平均值池化，它们都具有相同的思想，即通过对某些块应用非线性来汇总局部输入 \citep{%
+在神经网络中，池化层对输入的微小转换满足不变性. 最常见的一种池化是\emph{最大值池化}(max pooling)，它包括将输入拆分为（通常不重叠的）块并输出每个块的最大值. 其他类型的池化也存在，例如平均值池化，它们都具有相同的思想，即通过对某些块应用非线性来汇总局部输入 \citep{%
 boureau-cvpr-10,boureau-icml-10,boureau-iccv-11,ICML2011Saxe_551}.
 
 一些读者可能已经注意到，卷积运算的处理仅仅依赖于一个假设，即某些函数被重复应用到输入的子集上. 这意味着上一章中导出的关系可以在池化算法下重用. 由于池化不涉及零填充，描述一般情况的关系如下： 
@@ -649,7 +649,7 @@ $\mathbf{C}^T$ .
 
 现在让我们考虑一下从4维空间映射到16维空间，并同时保持\autoref{fig:no_padding_no_strides}中描述的卷积连接模式反过来又需要什么? 这一操作称为 {\em 转置卷积} (transposed convolution).
 
-转置卷积也叫 {\em 分步卷积\/}(fractionally strided convolutions)
+转置卷积也叫 {\em 分数步长卷积\/}(fractionally strided convolutions)
 或 {\em 逆卷积\/}(deconvolutions)\footnote{ ``逆卷积''(deconvolution) 一词有时在文献中使用，但我们不推荐这样用，理由是逆卷积在数学上被定义为卷积的逆，它不同于转置卷积.}，通过交换卷积的前向和反向传递来工作. 一种说法是卷积核定义了一个卷积，但它是直接卷积还是转置卷积取决于前向和反向传递的计算方式.
 
 例如， 虽然卷积核 $\mathbf{w}$ 定义了一个卷积，其正向和反向传播分别通过与 $\mathbf{C}$ 和 $\mathbf{C}^T$ 相乘来计算，但它 {\em 也} 定义了一个转置的卷积，其正向和反向传递分别通过与 $\mathbf{C}^T$ 和 $(\mathbf{C}^T)^T = \mathbf{C}$ 相乘来计算.\footnote{转置卷积操作可以被认为是{\em 某些}卷积相对于其输入的梯度，这通常是转置卷积在实际应用中的实现方式.}
@@ -691,7 +691,7 @@ $\mathbf{C}^T$ .
 
 \begin{relationship}\label{rel:arbitrary_padding_no_strides_transposed}
 一个由 $s = 1$, $k$ 和 $p$ 描述的卷积与一个由 $k' = k$, $s' = s$ 和 $p' = k -
-p - 1$ 描述的转置卷积相关联. 且其输出大小为
+p - 1$ 描述的转置卷积相关联，且其输出大小为
 \begin{equation*}
     o' = i' + (k - 1) - 2p.
 \end{equation*}
@@ -767,7 +767,7 @@ p - 1$ 描述的转置卷积相关联. 且其输出大小为
 
 使用与零填充卷积相同的归纳逻辑，可以推测$s>1$时卷积的转置涉及到$s<1$时的等效卷积. 
 正如将要解释的，这是一个有效的直观感受，这就是为什么转置卷积有时被称为 {\em
-分步卷积}.
+分数步长卷积}.
 
 \autoref{fig:no_padding_strides_transposed} 给出了当 $i = 5$, $k
 = 3$ 且 $s = 2$ 时的一个例子，这有助于理解分步包含的内容: 在输入单元{\em 之间\/}插入零，这使得内核的移动速度比单位步长慢.\footnote{这样做是低效的，并且实际的实现避免了无用的零乘法，但从概念上讲，这是怎样考虑步长卷积的转置.}
@@ -800,7 +800,7 @@ p - 1$ 描述的转置卷积相关联. 且其输出大小为
     \includegraphics[width=0.24\textwidth]{pdf/no_padding_strides_transposed_02.pdf}
     \includegraphics[width=0.24\textwidth]{pdf/no_padding_strides_transposed_03.pdf}
     \caption{\label{fig:no_padding_strides_transposed} 
-    一个 $3 \times 3$ 卷积核与一个应用$2 \times 2$步长(即 $i = 5$, $k = 3$, $s = 2$ 和 $p = 0$)的 $5 \times 5$ 输入做转置卷积. 等价于一个 $3 \times 3$ 卷积核与一个应用单位步长且填充了$2 \times 2$零边界(即 $i' = 2$, $\tilde{i}' = 3$, $k' = k$, $s' = 1$ and $p' = 2$) 的 $2 \times 2$ 输入(在输入之间插入 $1$ 个零)做卷积.}
+    一个 $3 \times 3$ 卷积核与一个应用$2 \times 2$步长(即 $i = 5$, $k = 3$, $s = 2$ 和 $p = 0$)的 $5 \times 5$ 输入做转置卷积. 等价于一个 $3 \times 3$ 卷积核与一个应用单位步长且填充了$2 \times 2$零边界(即 $i' = 2$, $\tilde{i}' = 3$, $k' = k$, $s' = 1$ 且 $p' = 2$) 的 $2 \times 2$ 输入(在输入之间插入 $1$ 个零)做卷积.}
 \end{figure}
 
 \begin{figure}[p]
